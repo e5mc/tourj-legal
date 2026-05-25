@@ -1,0 +1,181 @@
+/* TourJ Legal Pages — common stylesheet */
+:root {
+  --color-bg: #ffffff;
+  --color-fg: #1a1a1a;
+  --color-muted: #6b7280;
+  --color-accent: #2f6feb;
+  --color-border: #e5e7eb;
+  --color-card: #f9fafb;
+  --max-width: 760px;
+  --radius: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f1115;
+    --color-fg: #e9ecef;
+    --color-muted: #9ca3af;
+    --color-accent: #6aa1ff;
+    --color-border: #2a2f37;
+    --color-card: #161a20;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard",
+               "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  padding: 32px 20px 80px;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+header.page-header {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+}
+
+header.page-header h1 {
+  font-size: 1.8rem;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+
+header.page-header .meta {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+header.page-header .lang-switch {
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+header.page-header .lang-switch a {
+  margin-right: 12px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 40px 0 12px;
+  letter-spacing: -0.005em;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 24px 0 8px;
+  color: var(--color-fg);
+}
+
+p, ul, ol { margin: 0 0 14px; }
+ul, ol { padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+strong { font-weight: 600; }
+
+code {
+  background: var(--color-card);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.95rem;
+}
+
+th, td {
+  border: 1px solid var(--color-border);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--color-card);
+  font-weight: 600;
+}
+
+.callout {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  margin: 18px 0;
+  font-size: 0.95rem;
+}
+
+footer.page-footer {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+footer.page-footer a { color: var(--color-muted); }
+
+/* Index landing */
+.index-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.index-card {
+  display: block;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  background: var(--color-card);
+  color: var(--color-fg);
+  transition: border-color 0.15s ease;
+}
+
+.index-card:hover {
+  border-color: var(--color-accent);
+  text-decoration: none;
+}
+
+.index-card .card-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.index-card .card-sub {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+@media (min-width: 600px) {
+  .index-grid { grid-template-columns: 1fr 1fr; }
+}
