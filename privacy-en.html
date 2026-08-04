@@ -12,196 +12,257 @@
   <header class="page-header">
     <h1>Privacy Policy</h1>
     <div class="meta">
-      App: TourJ<br>
-      Effective: May 23, 2026 · Last updated: May 23, 2026
+      Service: TourJ<br>
+      Effective: May 23, 2026 · Last updated: August 2, 2026
     </div>
     <div class="lang-switch">
-      <a href="privacy-ko.html">한국어</a> · <strong>English</strong> · <a href="index.html">← Back</a>
+      <a href="privacy-ko.html">한국어</a> · <strong>English</strong> · <a href="index.html">← Index</a>
     </div>
   </header>
 
   <p>
-    umpire (operated by EOM MINKYU as a sole proprietor) ("we", "us", or "the Developer") operates the mobile application
-    <strong>TourJ</strong> (the "Service"). This Privacy Policy explains what
-    personal information we collect through the Service, how we use it, and the
-    choices you have. By using the Service you agree to the terms of this Policy.
+    umpire (sole proprietor, operator: EOM MINKYU, the "Operator") values the personal data of users of the
+    mobile application <strong>TourJ</strong> (the "Service") and publishes this Privacy Policy in accordance
+    with applicable laws, including the Personal Information Protection Act of Korea.
   </p>
 
-  <h2>1. Information We Collect</h2>
-
+  <h2>1. Data We Process and How It Is Collected</h2>
   <table>
     <thead>
-      <tr><th>Category</th><th>Items</th><th>Source</th></tr>
+      <tr><th>Category</th><th>Items</th><th>When / How</th></tr>
     </thead>
     <tbody>
       <tr>
         <td>Account</td>
-        <td>Email address, display name, Firebase UID, identity provider ID</td>
-        <td>You, when you sign up via email, Sign in with Apple, or Google Sign-In</td>
+        <td>Email address, display name, Firebase UID, sign-in provider identifier, profile photo URL (if provided by the social login)</td>
+        <td>Email sign-up, Sign in with Apple, Google Sign-In</td>
       </tr>
       <tr>
         <td>Profile</td>
-        <td>Nickname, profile photo (optional), friend list, shared trip membership</td>
-        <td>You, through profile editing and sharing features</td>
+        <td>Nickname, avatar emoji, friend code, friend relationships, shared-trip membership and role</td>
+        <td>Entered by the user; when adding friends or sharing trips</td>
       </tr>
       <tr>
         <td>Location</td>
-        <td>Approximate / precise location (latitude, longitude), places you search</td>
-        <td>Your device, only when you grant permission and actively use map features</td>
+        <td>Current location (latitude/longitude) — used on-device only to show the map and your position; not stored on our servers.
+            Names, addresses and coordinates of places you save become part of your trip data.</td>
+        <td>When using map/place features (only if you grant the OS permission)</td>
       </tr>
       <tr>
         <td>User content</td>
-        <td>Trip itineraries, place notes, diary entries and photos, ticket images/PDFs, receipt images and parsed text (merchant, amount, date, payment method), budget/expense records</td>
-        <td>You, when you add or upload content</td>
+        <td>Trips, places, notes, flight and accommodation details (including booking references), expenses and budgets,
+            packing lists, wishlist (cities/places you want to visit), globe records</td>
+        <td>Entered by the user; synced to the cloud when signed in</td>
       </tr>
       <tr>
-        <td>AI inputs</td>
-        <td>Prompts you submit to the AI itinerary generator, AI chat, and receipt OCR; attached images</td>
-        <td>You, when you use AI features</td>
+        <td>Ticket & document files</td>
+        <td>Booking confirmations, receipts and ticket images/PDFs — <strong>stored only on your device and never uploaded to our servers</strong></td>
+        <td>When you attach or scan them</td>
       </tr>
       <tr>
-        <td>Diagnostics</td>
-        <td>Crash logs, performance metrics, app version, OS version, non-identifying device identifiers</td>
-        <td>Firebase Crashlytics and Firebase Analytics, automatically</td>
+        <td>AI usage data</td>
+        <td>Trip conditions you enter for AI planning (city, dates, themes, budget, companions, preferences);
+            text extracted from documents by <strong>on-device OCR after sensitive data
+            (passport numbers, card numbers, resident registration numbers, emails, phone numbers, dates of birth)
+            is masked on the device</strong>; live-search queries; daily AI usage counters</td>
+        <td>Only when you use AI features, and only after separate explicit consent</td>
+      </tr>
+      <tr>
+        <td>Device & log data</td>
+        <td>Crash logs, performance metrics, app usage events, app version, OS version, device model,
+            app instance identifier, masked (pseudonymized) user identifier</td>
+        <td>Collected automatically via Firebase Crashlytics / Analytics</td>
       </tr>
     </tbody>
   </table>
 
   <div class="callout">
-    The Service does <strong>not</strong> collect IDFA (Identifier for Advertisers),
-    does <strong>not</strong> show or track for advertising, does <strong>not</strong>
-    request App Tracking Transparency permission, and does <strong>not</strong>
-    share data with third parties for cross-app or cross-site tracking.
+    The Service does not collect the advertising identifier (IDFA) and does not request App Tracking Transparency
+    permission. We do not perform third-party tracking, behavioral advertising, or ad profiling.
   </div>
 
-  <h2>2. How We Use Your Information</h2>
+  <h2>2. Purposes of Processing</h2>
   <ul>
-    <li>To authenticate you, keep your data isolated to your account, and sync it across your devices.</li>
-    <li>To provide the core features of the Service: trip planning, mapping, journaling, ticket storage, expense tracking.</li>
-    <li>To enable friend management and trip sharing among consenting users.</li>
-    <li>To provide AI features you request, including itinerary generation, chat responses, and receipt scanning.</li>
-    <li>To monitor crashes and performance, debug issues, and improve the Service.</li>
-    <li>To comply with applicable law, prevent abuse, and resolve disputes.</li>
+    <li>Member identification and authentication; isolating and syncing your data across devices</li>
+    <li>Providing core features: trips, places, tickets, budgets</li>
+    <li>Friends, trip sharing and read-only share links</li>
+    <li>AI itinerary generation, booking/receipt recognition and live search — only at your request and after separate consent</li>
+    <li>Rate-limiting to prevent AI abuse</li>
+    <li>Service stability, crash diagnosis and improvement; pseudonymized usage statistics</li>
+    <li>Compliance with legal obligations and dispute handling</li>
   </ul>
 
-  <h2>3. Legal Bases (EEA / UK Users)</h2>
+  <h2>3. Retention Periods</h2>
   <ul>
-    <li><strong>Performance of a contract</strong>: account creation, syncing trips, providing requested features.</li>
-    <li><strong>Consent</strong>: location access, camera/photo library access, AI-related uploads.</li>
-    <li><strong>Legitimate interests</strong>: securing the Service, debugging crashes, fraud prevention.</li>
-    <li><strong>Legal obligation</strong>: responding to lawful government requests.</li>
+    <li><strong>Account data and user content</strong>: kept until account deletion, then erased without delay (see Section 7 for scope and exceptions).</li>
+    <li><strong>AI usage counters</strong>: recorded per day; all deleted upon account deletion.</li>
+    <li><strong>Crash/performance logs (Crashlytics)</strong>: retained 90 days per Google policy, then deleted.</li>
+    <li><strong>Usage analytics (Analytics)</strong>: user-level data retained up to 14 months per Google policy; on account deletion the on-device analytics identifier and accumulated data are reset.</li>
+    <li><strong>AI inputs (Google Gemini)</strong>: not used to train AI models (paid API); Google may retain them for a limited period for abuse monitoring, then deletes them (see Section 6).</li>
+    <li><strong>Data subject to statutory retention</strong>: kept separately for the legally required period.</li>
+    <li><strong>Dispute/complaint records</strong>: kept 3 years after resolution.</li>
   </ul>
 
-  <h2>4. How We Share Information</h2>
-  <p>We do not sell your personal information. We share it only as described below.</p>
+  <h2>4. Provision to Third Parties</h2>
+  <p>We do not sell personal data and, in principle, do not provide it to third parties without consent, except:</p>
+  <ul>
+    <li>When you consent or request it yourself — e.g., sharing a trip shows your nickname/avatar and trip content to that friend;
+        creating a read-only share link shows a sanitized trip summary (booking references, individual expenses and attachments removed) to anyone with the link.</li>
+    <li>Where required by law or by lawful requests of investigative authorities.</li>
+  </ul>
 
+  <h2>5. Processing Delegation (Processors)</h2>
   <table>
     <thead>
-      <tr><th>Processor</th><th>Purpose</th><th>Data Shared</th></tr>
+      <tr><th>Processor</th><th>Delegated work</th><th>Items</th></tr>
     </thead>
     <tbody>
       <tr>
-        <td>Google LLC — Firebase (Authentication, Firestore, Storage, Crashlytics, Analytics, Cloud Functions)</td>
-        <td>Authentication, sync storage, file storage, crash and analytics collection, AI proxy hosting</td>
-        <td>Account info, user content, location data, photos, diagnostics, AI prompts</td>
+        <td>Google LLC<br>(Firebase Authentication, Cloud Firestore, Cloud Functions, Crashlytics, Analytics, App Check)</td>
+        <td>Authentication, data storage/sync, AI proxy server, crash/usage analytics, app integrity</td>
+        <td>Account, profile, user content, crash/performance logs, usage events</td>
       </tr>
       <tr>
-        <td>Google LLC — Google Maps Platform, Places API, Google Sign-In</td>
-        <td>Map rendering, place search and autocomplete, Google account login</td>
-        <td>Location data, search queries, account identifier</td>
+        <td>Google LLC<br>(Gemini API)</td>
+        <td>AI itinerary generation, booking/receipt text analysis, live search answers</td>
+        <td>Trip conditions, OCR text masked on-device, search queries. <em>Original images/PDFs are never sent; only after separate consent.</em></td>
+      </tr>
+      <tr>
+        <td>Google LLC<br>(Google Maps Platform, Places API, Google Sign-In)</td>
+        <td>Maps, place search/autocomplete, Google account login</td>
+        <td>Map interactions, search terms, place coordinates, account identifier</td>
       </tr>
       <tr>
         <td>Apple Inc.</td>
-        <td>Sign in with Apple, local/push notifications infrastructure</td>
-        <td>Apple ID identifier, optional relay email</td>
+        <td>Sign in with Apple</td>
+        <td>Apple ID identifier, email (private relay address if you choose)</td>
       </tr>
       <tr>
-        <td>AI model provider (accessed via our proxy)</td>
-        <td>AI itinerary generation, chat responses, receipt OCR analysis</td>
-        <td>The prompt you submit and any image you choose to attach</td>
-      </tr>
-      <tr>
-        <td>Other users you share with</td>
-        <td>Trip collaboration (only when you initiate sharing)</td>
-        <td>Trip content you have explicitly chosen to share</td>
+        <td>Open-Meteo (non-profit open API)</td>
+        <td>Weather forecasts for destinations</td>
+        <td>Destination city coordinates and dates (no account identifiers)</td>
       </tr>
     </tbody>
   </table>
 
-  <h2>5. International Data Transfers</h2>
-  <p>
-    The processors listed above operate global infrastructure and may process
-    your information in the United States or other countries. When we transfer
-    personal data outside your country of residence, we rely on the safeguards
-    these processors maintain (including Standard Contractual Clauses where
-    applicable). All transit is encrypted via TLS/HTTPS.
-  </p>
+  <h2>6. Cross-Border Transfers</h2>
+  <table>
+    <thead><tr><th>Item</th><th>Details</th></tr></thead>
+    <tbody>
+      <tr><td>Recipients</td>
+          <td>Google LLC (1600 Amphitheatre Parkway, Mountain View, CA, USA — <a href="https://support.google.com/policies/troubleshooter/7575787">privacy contact</a>),
+              Apple Inc. (One Apple Park Way, Cupertino, CA, USA)</td></tr>
+      <tr><td>Countries</td>
+          <td>The United States and other countries where Google/Apple operate data centers. Firestore and the AI proxy
+              (Cloud Functions) run primarily in the Seoul region (asia-northeast3); authentication, analytics and AI
+              processing may occur in the U.S. or elsewhere.</td></tr>
+      <tr><td>Items</td><td>The items listed in Sections 1 and 5</td></tr>
+      <tr><td>Timing / method</td><td>Transferred over encrypted connections (TLS/HTTPS) whenever you use the Service</td></tr>
+      <tr><td>Purpose</td><td>The purposes in Section 2</td></tr>
+      <tr><td>Retention</td>
+          <td>Same as Section 3. Gemini API inputs may be temporarily retained by Google for abuse monitoring and then deleted
+              (<a href="https://ai.google.dev/gemini-api/docs/usage-policies">Gemini data usage policy</a>); paid-tier inputs are not used for model training.</td></tr>
+      <tr><td>How to refuse / consequences</td>
+          <td>You may refuse or withdraw AI transfers at any time (separate in-app consent; Profile → AI data-transfer consent) and still use every
+              feature via manual entry. Transfers to Firebase are essential to operate the Service; you can refuse them by using
+              the app without an account (browse mode) or by deleting your account, in which case sync/friends/sharing are unavailable.
+              For other requests, contact the officer in Section 14.</td></tr>
+    </tbody>
+  </table>
 
-  <h2>6. Data Retention</h2>
+  <h2>7. Account Deletion and Scope of Erasure</h2>
+  <p>You can delete your account at any time in <strong>Profile → Account → Delete Account</strong>. Upon deletion we erase without delay:</p>
   <ul>
-    <li><strong>Account and user content</strong>: kept until you delete your account, at which point we erase it without undue delay from Firebase and any local cache the app controls.</li>
-    <li><strong>Crash and analytics data</strong>: retained per Firebase defaults (up to 90 days), then anonymized or deleted.</li>
-    <li><strong>Records we must keep by law</strong>: retained only for the period required by the applicable law.</li>
+    <li><strong>Server (Firebase)</strong>: account and profile; all trips, places and folders; globe backup (wishlist, engrave records);
+        friend relationships (including your entry left in friends' lists); share links you created; invitations sent or received;
+        <strong>shared trips you own (deleted for all members)</strong>; your membership in other members' shared trips;
+        AI usage records; the Firebase auth account (with Apple sign-in token revocation).</li>
+    <li><strong>Your device</strong>: trip files, ticket/booking/receipt files, wishlist, app settings and AI consent records,
+        scheduled notifications; analytics identifiers and accumulated data are reset.</li>
+  </ul>
+  <p>Exceptions, with reasons and handling:</p>
+  <ul>
+    <li><strong>Collaborative content of shared trips owned by other members</strong>: the trip itself remains for the remaining members;
+        only your membership and identifier links are removed. You may leave such trips or ask their owner to delete them before deleting your account.</li>
+    <li><strong>Processor system logs and backups</strong>: automatically purged by Google per their policies
+        (Crashlytics 90 days; Analytics up to 14 months; Gemini abuse-monitoring retention).</li>
+    <li><strong>Data under statutory retention</strong>: stored separately for the legally required period, then destroyed.</li>
+  </ul>
+  <p>You may re-register with the same email at any time; deleted data cannot be recovered.</p>
+
+  <h2>8. AI Features (Google Gemini)</h2>
+  <ul>
+    <li>AI itinerary generation, booking/receipt recognition and live search use Google LLC's Gemini API.</li>
+    <li>No data is sent until you give explicit consent on a dedicated consent screen that explains what is sent, to whom, and why.
+        The consent version and timestamp are recorded.</li>
+    <li>OCR runs <strong>on your device</strong>; passport numbers, card numbers, resident registration numbers, emails,
+        phone numbers and dates of birth are masked on-device before any text is sent. Original files are never uploaded.</li>
+    <li>Requests go through the Operator's proxy (Cloud Functions, Seoul region), which requires Firebase authentication and App Check.</li>
+    <li>If you decline or withdraw consent (Profile → AI data-transfer consent), every feature remains available via manual entry.</li>
+    <li>Per the Gemini API Terms, AI features are available only to users aged 18 or older, confirmed on the consent screen.</li>
+    <li>AI output may be inaccurate; the app always shows a review screen before anything is saved.</li>
   </ul>
 
-  <h2>7. Your Rights</h2>
-  <p>Depending on where you live, you may have the right to:</p>
+  <h2>9. Destruction of Personal Data</h2>
   <ul>
-    <li>Access the personal data we hold about you</li>
-    <li>Correct inaccurate or incomplete data</li>
-    <li>Delete your account and associated data</li>
-    <li>Restrict or object to certain processing</li>
-    <li>Receive a copy of your data in a portable format</li>
-    <li>Withdraw consent at any time, where processing relies on consent</li>
-    <li>Lodge a complaint with your local data protection authority</li>
-  </ul>
-  <p>
-    You can delete your account and all associated data directly from the app at
-    <em>Settings → Profile → Delete Account</em>. For any other request, contact
-    us at the email below; we will respond within 30 days.
-  </p>
-
-  <h2>8. Children's Privacy</h2>
-  <p>
-    The Service is not directed to children under the age of 14 (or under 13
-    where COPPA applies). We do not knowingly collect personal information from
-    such children. If you believe we have collected information from a child,
-    please contact us and we will delete it.
-  </p>
-
-  <h2>9. Security</h2>
-  <ul>
-    <li>All network traffic is encrypted using TLS/HTTPS.</li>
-    <li>Firestore security rules enforce per-user data isolation.</li>
-    <li>AI proxy endpoints require a verified Firebase authentication token.</li>
-    <li>Secrets are never embedded in client source code; they are injected via build configuration and server-side environment variables.</li>
-    <li>Diagnostic logs are masked to avoid leaking personal information.</li>
+    <li><strong>Procedure</strong>: data whose retention period has ended, or subject to a deletion request, is destroyed without delay.</li>
+    <li><strong>Method</strong>: electronic files are deleted irrecoverably; paper documents are shredded or incinerated.</li>
   </ul>
 
-  <h2>10. Notifications</h2>
+  <h2>10. Your Rights</h2>
+  <p>You may at any time request access, correction, deletion, or suspension of processing; withdraw consent (including AI transfers); and request copies of your data.
+     Exercise these rights directly in the app (profile editing, AI consent management, account deletion) or by contacting the officer in Section 14.
+     We respond within 10 days. Rights may also be exercised through a legal representative or an authorized agent.</p>
+
+  <h2>11. Security Measures</h2>
+  <ul>
+    <li>All network traffic is encrypted with TLS (HTTPS).</li>
+    <li>Firestore security rules restrict access to your own data (or trips you are a member of).</li>
+    <li>The AI proxy and the account-deletion API require Firebase auth tokens and App Check verification.</li>
+    <li>iOS file protection is applied to on-device files such as tickets and booking documents.</li>
+    <li>Release-build system logs keep contents private (no place names/coordinates in plain text); identifiers are masked.</li>
+    <li>Secret keys are kept out of source code, in build settings and server-side environment variables.</li>
+    <li>Sensitive data is automatically masked on-device before any AI transfer.</li>
+  </ul>
+
+  <h2>12. Automatic Collection and Opt-Out</h2>
   <p>
-    The app may schedule local notifications (for example, daily reminders) only
-    after you have granted notification permission. You can revoke this
-    permission in iOS Settings at any time.
+    The Service uses no cookies. Firebase Crashlytics/Analytics automatically collect crash logs, usage events,
+    an app instance identifier and a masked (pseudonymized) user identifier for diagnostics and statistics. No IDFA is collected.
+  </p>
+  <p>
+    To opt out: deleting your account resets the analytics identifier and accumulated data on your device;
+    deleting the app stops all collection; to request erasure of already-collected data, contact the officer in Section 14.
   </p>
 
-  <h2>11. Changes to This Policy</h2>
+  <h2>13. Children Under 14</h2>
   <p>
-    We may update this Policy from time to time. Material changes will be
-    announced via this page at least 7 days in advance, and through in-app or
-    email notice where appropriate. The "Effective" date at the top reflects the
-    latest revision.
+    The Service does not accept sign-ups from children under 14. Sign-up includes a confirmation that the user is 14 or older.
+    If we learn that a child under 14 has registered without legal-guardian consent, we delete the account and its data without delay.
+    Guardians may contact the officer below.
   </p>
 
-  <h2>12. Contact</h2>
-  <p>
-    Privacy questions and requests can be sent to:<br>
-    EOM MINKYU — <a href="mailto:dainomk556@gmail.com">dainomk556@gmail.com</a>
-  </p>
+  <h2>14. Privacy Officer</h2>
+  <ul>
+    <li>Name: EOM MINKYU</li>
+    <li>Email: <a href="mailto:dainomk556@gmail.com">dainomk556@gmail.com</a></li>
+  </ul>
+
+  <h2>15. Remedies</h2>
+  <p>For dispute mediation or counseling in Korea: Personal Information Dispute Mediation Committee (kopico.go.kr / 1833-6972),
+     Privacy Report Center (privacy.kisa.or.kr / 118), Supreme Prosecutors' Office (spo.go.kr / 1301), National Police Agency (ecrm.police.go.kr / 182).</p>
+
+  <h2>16. Changes to This Policy</h2>
+  <p>Changes are announced on this page at least 7 days before they take effect; material changes are additionally announced in-app or by email.</p>
+  <ul>
+    <li>May 23, 2026: first version.</li>
+    <li>August 2, 2026: comprehensive revision — detailed Gemini AI disclosure and separate consent, itemized cross-border transfers,
+        detailed deletion scope, age-14 confirmation, removal of unused items (Cloud Storage, push notifications).</li>
+  </ul>
 
   <footer class="page-footer">
     © 2026 umpire. All rights reserved.<br>
-    <a href="terms-en.html">Terms of Service</a> · <a href="licenses.html">Open Source Licenses</a> · <a href="index.html">Index</a>
+    <a href="terms-en.html">Terms of Service</a> · <a href="licenses.html">Open-Source Licenses</a> · <a href="index.html">Index</a>
   </footer>
 </main>
 </body>
