@@ -13,7 +13,7 @@
     <h1>Privacy Policy</h1>
     <div class="meta">
       Service: TourJ<br>
-      Effective: May 23, 2026 · Last updated: August 2, 2026
+      Effective: May 23, 2026 · Last updated: August 10, 2026
     </div>
     <div class="lang-switch">
       <a href="privacy-ko.html">한국어</a> · <strong>English</strong> · <a href="index.html">← Index</a>
@@ -44,8 +44,9 @@
       </tr>
       <tr>
         <td>Location</td>
-        <td>Current location (latitude/longitude) — used on-device only to show the map and your position; not stored on our servers.
-            Names, addresses and coordinates of places you save become part of your trip data.</td>
+        <td>Current location (latitude/longitude) — processed on the device and by Google Maps/Places SDKs for map and nearby-place features;
+            it is not stored on the Operator's servers or linked to your TourJ account identifier.
+            Names, addresses and coordinates of destinations you deliberately save are trip content, not a current-location history.</td>
         <td>When using map/place features (only if you grant the OS permission)</td>
       </tr>
       <tr>
@@ -68,6 +69,13 @@
         <td>Only when you use AI features, and only after separate explicit consent</td>
       </tr>
       <tr>
+        <td>Purchase history</td>
+        <td>Apple transaction ID, product ID, transaction environment (Sandbox/Production), quantity, purchase/refund times,
+            server validation/pass-grant/refund-processing times, duplicate-redemption status, refund status, and recovered/adjusted quantities.
+            <strong>TourJ does not receive or store payment-card or bank-account details; Apple processes them directly.</strong></td>
+        <td>When an App Store in-app purchase is validated/granted or an Apple-approved refund/refund-reversal notification is processed</td>
+      </tr>
+      <tr>
         <td>Device & log data</td>
         <td>Crash logs, performance metrics, app usage events, app version, OS version, device model,
             app instance identifier, masked (pseudonymized) user identifier</td>
@@ -88,6 +96,8 @@
     <li>Friends, trip sharing and read-only share links</li>
     <li>AI itinerary generation, booking/receipt recognition and live search — only at your request and after separate consent</li>
     <li>Rate-limiting to prevent AI abuse</li>
+    <li>Validating in-app purchases, granting AI itinerary-generation passes, withdrawing unused refunded passes, adjusting used refunded quantities,
+        restoring entitlements when Apple reverses a refund, preventing duplicate/fraudulent redemption, and handling purchase inquiries</li>
     <li>Service stability, crash diagnosis and improvement; pseudonymized usage statistics</li>
     <li>Compliance with legal obligations and dispute handling</li>
   </ul>
@@ -96,8 +106,20 @@
   <ul>
     <li><strong>Account data and user content</strong>: kept until account deletion, then erased without delay (see Section 7 for scope and exceptions).</li>
     <li><strong>AI usage counters</strong>: recorded per day; all deleted upon account deletion.</li>
-    <li><strong>Crash/performance logs (Crashlytics)</strong>: retained 90 days per Google policy, then deleted.</li>
-    <li><strong>Usage analytics (Analytics)</strong>: user-level data retained up to 14 months per Google policy; on account deletion the on-device analytics identifier and accumulated data are reset.</li>
+    <li><strong>Account-deletion safety lock</strong>: to prevent another device or a still-valid session from recreating data while deletion
+        is in progress, we store only the lock state and expiry time. The lock is set to expire 48 hours after creation or retry and is automatically
+        removed after expiry, subject to Firestore TTL processing delay.</li>
+    <li><strong>In-app purchase records</strong>: while the account exists, retained to validate transactions, grant passes, and prevent duplicate redemption.
+        On account deletion, the member identifier (UID) is removed. A UID-unlinked ledger containing the Apple transaction ID,
+        product, quantity, environment, purchase/grant/refund-processing times, refund status, and recovered/adjusted quantities is retained to prevent the same transaction from being credited twice
+        and to preserve payment integrity. Any mandatory statutory retention is handled separately for the required period.</li>
+    <li><strong>Crash logs (Crashlytics)</strong>: under the <a href="https://firebase.google.com/support/privacy/">Firebase retention notice</a>,
+        Google retains crash stacks and associated identifiers for 90 days before beginning removal from live and backup systems.</li>
+    <li><strong>Usage analytics (Analytics)</strong>: user- and event-level data follows the retention selected in the Analytics property.
+        The <a href="https://support.google.com/analytics/answer/7667196">Google Analytics retention documentation</a> states that a standard
+        GA4 property allows 2 or 14 months, and that setting might not apply to standard aggregated reports.
+        The Operator records the actual property setting before launch and during quarterly operations reviews. Account deletion resets
+        the identifier and analytics data on the device; records already transmitted follow the configured retention and Google's deletion process.</li>
     <li><strong>AI inputs (Google Gemini)</strong>: not used to train AI models (paid API); Google may retain them for a limited period for abuse monitoring, then deletes them (see Section 6).</li>
     <li><strong>Data subject to statutory retention</strong>: kept separately for the legally required period.</li>
     <li><strong>Dispute/complaint records</strong>: kept 3 years after resolution.</li>
@@ -134,8 +156,9 @@
       </tr>
       <tr>
         <td>Apple Inc.</td>
-        <td>Sign in with Apple</td>
-        <td>Apple ID identifier, email (private relay address if you choose)</td>
+        <td>Sign in with Apple; App Store in-app purchase/refund processing and transaction validation</td>
+        <td>Apple ID identifier, email (private relay address if you choose), transaction ID, product ID, quantity,
+            purchase/refund times, transaction environment and refund status. Apple handles payment details directly; TourJ does not receive them.</td>
       </tr>
       <tr>
         <td>Open-Meteo (non-profit open API)</td>
@@ -156,7 +179,7 @@
           <td>The United States and other countries where Google/Apple operate data centers. Firestore and the AI proxy
               (Cloud Functions) run primarily in the Seoul region (asia-northeast3); authentication, analytics and AI
               processing may occur in the U.S. or elsewhere.</td></tr>
-      <tr><td>Items</td><td>The items listed in Sections 1 and 5</td></tr>
+      <tr><td>Items</td><td>The items listed in Sections 1 and 5, including in-app purchase transaction information</td></tr>
       <tr><td>Timing / method</td><td>Transferred over encrypted connections (TLS/HTTPS) whenever you use the Service</td></tr>
       <tr><td>Purpose</td><td>The purposes in Section 2</td></tr>
       <tr><td>Retention</td>
@@ -184,8 +207,15 @@
   <ul>
     <li><strong>Collaborative content of shared trips owned by other members</strong>: the trip itself remains for the remaining members;
         only your membership and identifier links are removed. You may leave such trips or ask their owner to delete them before deleting your account.</li>
+    <li><strong>In-app purchase ledger with the member UID removed</strong>: your member identifier (UID) is removed on account deletion.
+        The Apple transaction ID, product, quantity, environment, purchase/grant/refund-processing times, refund status and recovered/adjusted quantities remain solely to prevent transaction reuse
+        or duplicate credit and to preserve payment integrity; they are not used to relink the ledger to your profile or deleted trip data.</li>
+    <li><strong>Account-deletion safety lock</strong>: only the lock state and expiry time remain to prevent deletion races and data recreation
+        through an existing authenticated session. It is set to expire 48 hours after creation or retry and is automatically removed after expiry, subject to
+        Firestore TTL processing delay.</li>
     <li><strong>Processor system logs and backups</strong>: automatically purged by Google per their policies
-        (Crashlytics 90 days; Analytics up to 14 months; Gemini abuse-monitoring retention).</li>
+        (Crashlytics is retained 90 days before removal begins; Analytics user/event-level retention is the property's 2- or 14-month setting,
+        while standard aggregate reports are outside that setting; Gemini abuse-monitoring retention).</li>
     <li><strong>Data under statutory retention</strong>: stored separately for the legally required period, then destroyed.</li>
   </ul>
   <p>You may re-register with the same email at any time; deleted data cannot be recovered.</p>
@@ -228,7 +258,9 @@
   <h2>12. Automatic Collection and Opt-Out</h2>
   <p>
     The Service uses no cookies. Firebase Crashlytics/Analytics automatically collect crash logs, usage events,
-    an app instance identifier and a masked (pseudonymized) user identifier for diagnostics and statistics. No IDFA is collected.
+    an app instance identifier and a masked (pseudonymized) user identifier for diagnostics and statistics.
+    While you are signed in, crash/performance data and usage events may be linked to that pseudonymous identifier.
+    The app instance identifier is not the advertising identifier (IDFA) and is not used for advertising tracking.
   </p>
   <p>
     To opt out: deleting your account resets the analytics identifier and accumulated data on your device;
@@ -258,6 +290,8 @@
     <li>May 23, 2026: first version.</li>
     <li>August 2, 2026: comprehensive revision — detailed Gemini AI disclosure and separate consent, itemized cross-border transfers,
         detailed deletion scope, age-14 confirmation, removal of unused items (Cloud Storage, push notifications).</li>
+    <li>August 10, 2026: clarified App Store purchase/refund records, refunded-pass adjustments and their retention/deletion treatment,
+        the account-deletion safety lock, pseudonymous linking in Analytics/Crashlytics, and on-device-only handling of original photos/PDFs.</li>
   </ul>
 
   <footer class="page-footer">
