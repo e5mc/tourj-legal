@@ -13,7 +13,7 @@
     <h1>개인정보처리방침</h1>
     <div class="meta">
       서비스명: TourJ<br>
-      시행일: 2026년 5월 23일 · 최종 개정일: 2026년 8월 10일
+      시행일: 2026년 5월 23일 · 최종 개정일: 2026년 8월 28일
     </div>
     <div class="lang-switch">
       <strong>한국어</strong> · <a href="privacy-en.html">English</a> · <a href="index.html">← 목록</a>
@@ -75,11 +75,11 @@
       </tr>
       <tr>
         <td>구매 기록</td>
-        <td>AI 일정 생성 이용권의 Apple 거래 ID, 상품 ID, 거래 환경(Sandbox/Production), 수량,
+        <td>AI 일정 생성 이용권의 Apple 거래 ID 또는 Google Play 주문 ID, 상품 ID, 거래 환경(Sandbox/Production/PlayTest/Play), 수량,
             구매·환불 시각, 서버 검증·이용권 지급·환불 처리 시각, 중복 지급 여부, 환불 상태와 회수/조정 수량.
             <strong>카드번호·은행계좌 등 결제수단 정보는
-            TourJ가 수집하거나 보관하지 않고 Apple이 직접 처리합니다.</strong></td>
-        <td>App Store 인앱결제 구매를 검증·지급하거나 Apple의 승인 환불·환불 취소 알림을 처리할 때</td>
+            TourJ가 수집하거나 보관하지 않고 Apple 또는 Google이 직접 처리합니다.</strong></td>
+        <td>App Store·Google Play 인앱결제 구매를 검증·지급하거나 승인된 환불·환불 취소 알림을 처리할 때</td>
       </tr>
       <tr>
         <td>기기·로그 정보</td>
@@ -91,7 +91,7 @@
   </table>
 
   <div class="callout">
-    본 서비스는 광고 식별자(IDFA)를 수집하지 않으며, 「App Tracking Transparency」 권한을 요청하지 않습니다.
+    본 서비스는 광고 식별자(iOS IDFA, Android 광고 ID)를 수집하지 않으며, 「App Tracking Transparency」 권한을 요청하지 않습니다. Android 앱은 광고 ID 권한(AD_ID)을 포함하지 않고, Analytics의 광고 ID 수집·광고 개인화 신호를 꺼 둡니다.
     제3자 추적, 행태정보 기반 맞춤형 광고, 광고 목적의 프로파일링을 일체 수행하지 않습니다.
   </div>
 
@@ -118,7 +118,7 @@
         상태와 만료시각만 저장하는 기술적 잠금을 사용합니다. 잠금은 생성·재시도 시점부터 48시간 후 만료되도록 설정되며,
         만료 후 Firestore TTL 처리 지연을 거쳐 자동 삭제됩니다.</li>
     <li><strong>인앱결제 구매 기록</strong>: 계정 이용 중에는 거래 검증·이용권 지급·중복 지급 방지를 위해 보유합니다.
-        계정 삭제 시 회원 식별자(UID) 연결은 제거하고, Apple 거래 ID·상품·수량·거래 환경·구매·지급·환불 처리 시각과
+        계정 삭제 시 회원 식별자(UID) 연결은 제거하고, Apple 거래 ID 또는 Google Play 주문 ID·상품·수량·거래 환경·구매·지급·환불 처리 시각과
         환불 처리 상태·회수/조정 수량으로 구성된
         회원 UID 연결이 제거된 거래 원장은 동일 거래의 중복 지급을 막고 결제 무결성을 유지하기 위해 보유합니다. 법령상 별도 보존 의무가
         적용되는 경우에는 해당 기간 동안 분리 보관합니다.</li>
@@ -175,6 +175,11 @@
         <td>Apple 로그인(Sign in with Apple), App Store 인앱결제·환불 처리 및 거래 검증</td>
         <td>Apple ID 식별자, 이메일(이용자 선택 시 비공개 릴레이 주소), 거래 ID·상품 ID·수량·구매·환불 시각·거래 환경·환불 상태.
             결제수단 정보는 Apple이 직접 처리하며 TourJ에 제공되지 않음</td>
+      </tr>
+      <tr>
+        <td>Google LLC<br>(Google Play Billing / Android Publisher API)</td>
+        <td>Google Play 인앱결제·환불 처리, 거래 검증 및 소모 처리</td>
+        <td>Google Play 주문 ID·상품 ID·수량·구매·환불 시각·거래 환경·환불 상태. 결제수단 정보는 Google이 직접 처리하며 TourJ에 제공되지 않음</td>
       </tr>
       <tr>
         <td>Open-Meteo (비영리 오픈 API)</td>
@@ -238,7 +243,7 @@
   <ul>
     <li><strong>다른 멤버가 소유한 공유 여행의 공동 콘텐츠</strong>: 남은 멤버들의 서비스 이용을 위해 여행 자체는 유지되고,
         탈퇴자의 멤버십·식별자 연결만 삭제됩니다. 원하시면 탈퇴 전에 해당 여행에서 직접 나가거나 소유자에게 삭제를 요청할 수 있습니다.</li>
-    <li><strong>회원 UID 연결이 제거된 인앱결제 거래 원장</strong>: 계정 삭제 시 회원 식별자(UID)는 제거합니다. Apple 거래 ID와
+    <li><strong>회원 UID 연결이 제거된 인앱결제 거래 원장</strong>: 계정 삭제 시 회원 식별자(UID)는 제거합니다. Apple 거래 ID 또는 Google Play 주문 ID와
         상품·수량·거래 환경·구매·지급·환불 처리 시각, 환불 처리 상태와 회수/조정 수량은 동일 거래의 재사용·중복 지급 방지와 결제 무결성 유지를 위해 남으며,
         회원 프로필이나 삭제된 여행 데이터와 다시 연결하는 데 사용하지 않습니다.</li>
     <li><strong>계정 삭제 안전 잠금</strong>: 삭제 경합과 기존 인증 세션에 의한 데이터 재생성을 막기 위해 상태와 만료시각만 남깁니다.
@@ -301,7 +306,7 @@
     본 서비스는 쿠키를 사용하지 않습니다. 앱 오류 진단과 이용 통계를 위해 Firebase Crashlytics/Analytics가
     크래시 로그·이용 이벤트·앱 인스턴스 식별자·마스킹된 사용자 식별자(가명정보)를 자동 수집합니다.
     로그인 상태에서는 가명처리된 사용자 식별자가 크래시·성능 및 이용 이벤트와 연결될 수 있습니다.
-    앱 인스턴스 식별자는 광고 식별자(IDFA)가 아니며, 광고 추적에는 사용하지 않습니다.
+    앱 인스턴스 식별자는 광고 식별자(IDFA·Android 광고 ID)가 아니며, 광고 추적에는 사용하지 않습니다.
   </p>
   <p>
     수집을 원하지 않는 경우: ① 계정 삭제 시 기기의 분석 식별자와 축적 데이터가 초기화됩니다.
@@ -344,6 +349,8 @@
         계정 삭제 범위 상세화, 만 14세 이상 확인 절차 반영, 미사용 항목(Cloud Storage·푸시 알림) 삭제 등 전면 개정</li>
     <li>2026년 8월 10일: App Store 인앱결제·환불 거래 기록의 항목·목적·보유, 환불 이용권 조정 및 계정 삭제 시 처리,
         계정 삭제 안전 잠금, Analytics/Crashlytics의 가명 사용자 연결 상태, 사진·PDF 원본의 기기 내 처리 범위를 명확히 함</li>
+    <li>2026년 8월 28일: Android(Google Play) 출시 대비 — Google Play 인앱결제 주문 ID·환불 처리 항목과 수탁자(Google Play Billing) 추가,
+        Android 광고 ID 미수집·광고 개인화 신호 차단을 명시, 계정 삭제 웹 페이지 안내</li>
   </ul>
 
   <footer class="page-footer">
