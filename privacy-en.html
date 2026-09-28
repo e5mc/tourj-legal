@@ -13,12 +13,19 @@
     <h1>Privacy Policy</h1>
     <div class="meta">
       Service: TourJ<br>
-      Effective: May 23, 2026 · Last updated: August 28, 2026
+      Effective: October 5, 2026 · Last updated: September 28, 2026 (first effective May 23, 2026)
     </div>
     <div class="lang-switch">
       <a href="privacy-ko.html">한국어</a> · <strong>English</strong> · <a href="index.html">← Index</a>
     </div>
   </header>
+
+  <div class="callout">
+    <strong>Revision notice — September 28, 2026 (effective October 5, 2026)</strong><br>
+    We added the data processed for the in-app 1:1 inquiry and feedback chat ("뚜르제이에게 말하기" in the Me tab) and for push notifications (trip invitations,
+    a friend joining your trip, friend requests and replies to your inquiries), and updated the purposes, retention, processors, cross-border transfers,
+    deletion scope and security measures accordingly. See Section 16 for the change history.
+  </div>
 
   <p>
     umpire (sole proprietor, operator: EOM MINKYU, the "Operator") values the personal data of users of the
@@ -81,6 +88,20 @@
             app instance identifier, masked (pseudonymized) user identifier</td>
         <td>Collected automatically via Firebase Crashlytics / Analytics</td>
       </tr>
+      <tr>
+        <td>Inquiry &amp; feedback chat</td>
+        <td>Messages exchanged between you and the Operator and when they were sent and read; a conversation summary (preview of the last message, message counts);
+            whether the Operator has blocked the conversation; device information at the time you send a message (platform (iOS/Android), app version, OS version,
+            device model); your nickname, avatar emoji and friend code shown on the Operator's screen (copied from your profile)</td>
+        <td>When you send a message in the 1:1 inquiry and feedback chat ("뚜르제이에게 말하기" in the Me tab; signed-in users only)</td>
+      </tr>
+      <tr>
+        <td>Notification address</td>
+        <td>Your device's push notification address (Firebase Cloud Messaging registration token), platform (iOS/Android), app version, and when it was saved or updated.
+            The address is issued to your device by Firebase Cloud Messaging included in the app; it is linked to your account and stored on our servers only on devices
+            where you are signed in and have allowed notifications</td>
+        <td>When you allow notifications on a signed-in device, and when the address changes</td>
+      </tr>
     </tbody>
   </table>
 
@@ -94,6 +115,8 @@
     <li>Member identification and authentication; isolating and syncing your data across devices</li>
     <li>Providing core features: trips, places, tickets, budgets</li>
     <li>Friends, trip sharing and read-only share links</li>
+    <li>Receiving and answering inquiries and feedback through the 1:1 chat, checking reported problems and improving the Service</li>
+    <li>Sending push notifications such as trip invitations, a friend joining your trip, friend requests and replies to your inquiries</li>
     <li>AI itinerary generation, booking/receipt recognition and live search — only at your request and after separate consent</li>
     <li>Rate-limiting to prevent AI abuse</li>
     <li>Validating in-app purchases, granting AI itinerary-generation passes, withdrawing unused refunded passes, adjusting used refunded quantities,
@@ -106,6 +129,10 @@
   <ul>
     <li><strong>Account data and user content</strong>: kept until account deletion, then erased without delay (see Section 7 for scope and exceptions).</li>
     <li><strong>AI usage counters</strong>: recorded per day; all deleted upon account deletion.</li>
+    <li><strong>Inquiry &amp; feedback chat</strong>: kept until you delete your account, then deleted without delay. However, conversations about disputes or
+        complaints, such as purchases and refunds, may be kept as described under "Dispute/complaint records" below.</li>
+    <li><strong>Notification addresses</strong>: deleted when you sign out on that device or delete your account. In addition, when we send notifications, addresses
+        not updated for more than 270 days and addresses the notification service reports as no longer usable are deleted.</li>
     <li><strong>Account-deletion safety lock</strong>: to prevent another device or a still-valid session from recreating data while deletion
         is in progress, we store only the lock state and expiry time. The lock is set to expire 48 hours after creation or retry and is automatically
         removed after expiry, subject to Firestore TTL processing delay.</li>
@@ -142,7 +169,7 @@
       <tr>
         <td>Google LLC<br>(Firebase Authentication, Cloud Firestore, Cloud Functions, Crashlytics, Analytics, App Check)</td>
         <td>Authentication, data storage/sync, AI proxy server, crash/usage analytics, app integrity</td>
-        <td>Account, profile, user content, crash/performance logs, usage events</td>
+        <td>Account, profile, user content, inquiry &amp; feedback chat, crash/performance logs, usage events</td>
       </tr>
       <tr>
         <td>Google LLC<br>(Gemini API)</td>
@@ -153,6 +180,18 @@
         <td>Google LLC<br>(Google Maps Platform, Places API, Google Sign-In)</td>
         <td>Maps, place search/autocomplete, Google account login</td>
         <td>Map interactions, search terms, place coordinates, account identifier</td>
+      </tr>
+      <tr>
+        <td>Google LLC<br>(Firebase Cloud Messaging)</td>
+        <td>Sending push notifications</td>
+        <td>Notification address (registration token), notification content (the sender's nickname and trip name for trip invitation, trip joining and
+            friend-request notifications; a message preview and nickname for inquiry chat notifications), and identifiers used to open the right screen when you
+            tap a notification (trip, invitation or conversation identifiers)</td>
+      </tr>
+      <tr>
+        <td>Apple Inc.<br>(Apple Push Notification service)</td>
+        <td>Delivering push notifications to iPhones</td>
+        <td>Device notification address and notification content (as above)</td>
       </tr>
       <tr>
         <td>Apple Inc.</td>
@@ -184,8 +223,8 @@
           <td>The United States and other countries where Google/Apple operate data centers. Firestore and the AI proxy
               (Cloud Functions) run primarily in the Seoul region (asia-northeast3); authentication, analytics and AI
               processing may occur in the U.S. or elsewhere.</td></tr>
-      <tr><td>Items</td><td>The items listed in Sections 1 and 5, including in-app purchase transaction information</td></tr>
-      <tr><td>Timing / method</td><td>Transferred over encrypted connections (TLS/HTTPS) whenever you use the Service</td></tr>
+      <tr><td>Items</td><td>The items listed in Sections 1 and 5, including the inquiry &amp; feedback chat, notification addresses and notification content, and in-app purchase transaction information</td></tr>
+      <tr><td>Timing / method</td><td>Transferred over encrypted connections (TLS/HTTPS) whenever you use the Service, including sending chat messages and push notifications</td></tr>
       <tr><td>Purpose</td><td>The purposes in Section 2</td></tr>
       <tr><td>Retention</td>
           <td>Same as Section 3. Gemini API inputs may be temporarily retained by Google for abuse monitoring and then deleted
@@ -194,6 +233,7 @@
           <td>You may refuse or withdraw AI transfers at any time (separate in-app consent; Profile → AI data-transfer consent) and still use every
               feature via manual entry. Transfers to Firebase are essential to operate the Service; you can refuse them by using
               the app without an account (browse mode) or by deleting your account, in which case sync/friends/sharing are unavailable.
+              You can turn off push notifications in your phone's settings, and signing out deletes that device's notification address; all other features keep working.
               For other requests, contact the officer in Section 14.</td></tr>
     </tbody>
   </table>
@@ -204,6 +244,7 @@
     <li><strong>Server (Firebase)</strong>: account and profile; all trips, places and folders; globe backup (wishlist, engrave records);
         friend relationships (including your entry left in friends' lists); share links you created; invitations sent or received;
         <strong>shared trips you own (deleted for all members)</strong>; your membership in other members' shared trips;
+        the 1:1 inquiry and feedback chat (all messages and the conversation summary) and this account's device notification addresses;
         AI usage records; the Firebase auth account (with Apple sign-in token revocation).</li>
     <li><strong>Your device</strong>: trip files, ticket/booking/receipt files, wishlist, app settings and AI consent records,
         scheduled notifications; analytics identifiers and accumulated data are reset.</li>
@@ -221,6 +262,7 @@
     <li><strong>Processor system logs and backups</strong>: automatically purged by Google per their policies
         (Crashlytics is retained 90 days before removal begins; Analytics user/event-level retention is the property's 2- or 14-month setting,
         while standard aggregate reports are outside that setting; Gemini abuse-monitoring retention).</li>
+    <li><strong>Dispute/complaint records</strong>: records in the 1:1 inquiry and feedback chat about disputes or complaints, such as purchases and refunds, may be kept separately for 3 years after resolution under Section 3.</li>
     <li><strong>Data under statutory retention</strong>: stored separately for the legally required period, then destroyed.</li>
   </ul>
   <p>You may re-register with the same email at any time; deleted data cannot be recovered.</p>
@@ -246,13 +288,16 @@
 
   <h2>10. Your Rights</h2>
   <p>You may at any time request access, correction, deletion, or suspension of processing; withdraw consent (including AI transfers); and request copies of your data.
-     Exercise these rights directly in the app (profile editing, AI consent management, account deletion) or by contacting the officer in Section 14.
+     Exercise these rights directly in the app (profile editing, AI consent management, account deletion) or by contacting the officer in Section 14
+     (by email or through the in-app 1:1 inquiry and feedback chat).
      We respond within 10 days. Rights may also be exercised through a legal representative or an authorized agent.</p>
 
   <h2>11. Security Measures</h2>
   <ul>
     <li>All network traffic is encrypted with TLS (HTTPS).</li>
     <li>Firestore security rules restrict access to your own data (or trips you are a member of).</li>
+    <li>Security rules let only you and the Operator read your 1:1 inquiry and feedback chat, and sent messages cannot be edited or deleted in the app so the
+        conversation record is not altered. Notification addresses cannot be read by the app and are used only by the server to send notifications.</li>
     <li>The AI proxy and the account-deletion API require Firebase auth tokens and App Check verification.</li>
     <li>iOS file protection is applied to on-device files such as tickets and booking documents.</li>
     <li>Release-build system logs keep contents private (no place names/coordinates in plain text); identifiers are masked.</li>
@@ -266,6 +311,8 @@
     an app instance identifier and a masked (pseudonymized) user identifier for diagnostics and statistics.
     While you are signed in, crash/performance data and usage events may be linked to that pseudonymous identifier.
     The app instance identifier is not an advertising identifier (IDFA / Android Advertising ID) and is not used for advertising tracking. The Android app does not include the AD_ID permission and disables Analytics advertising-ID collection and ad-personalization signals.
+    The notification address used for push notifications (Firebase Cloud Messaging registration token) is also issued to your device by Firebase included in the app,
+    and is stored on our servers only as described in Section 1.
   </p>
   <p>
     To opt out: deleting your account resets the analytics identifier and accumulated data on your device;
@@ -299,6 +346,10 @@
         the account-deletion safety lock, pseudonymous linking in Analytics/Crashlytics, and on-device-only handling of original photos/PDFs.</li>
     <li>August 28, 2026: Android (Google Play) launch — added Google Play in-app purchase order ID / refund records and the Google Play Billing processor,
         stated that the Android Advertising ID is not collected and ad-personalization signals are disabled, and referenced the web account-deletion page.</li>
+    <li>September 28, 2026 (effective October 5, 2026): added the 1:1 inquiry and feedback chat (messages and device information at the time of sending) and
+        notification addresses (Firebase Cloud Messaging registration tokens) for push notifications (trip invitations, a friend joining your trip, friend requests
+        and replies to inquiries), with their purposes, retention, processors (Firebase Cloud Messaging, Apple Push Notification service), cross-border transfers,
+        deletion scope and security measures.</li>
   </ul>
 
   <footer class="page-footer">
