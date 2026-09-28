@@ -22,7 +22,7 @@
 
   <div class="callout">
     <strong>Revision notice — September 28, 2026 (effective October 5, 2026)</strong><br>
-    We added the data processed for the in-app 1:1 inquiry and feedback chat ("뚜르제이에게 말하기" in the Me tab) and for push notifications (trip invitations,
+    We added the data processed for trip albums (photo copies, capture time and capture location), the in-app 1:1 inquiry and feedback chat ("뚜르제이에게 말하기" in the Me tab) and for push notifications (trip invitations,
     a friend joining your trip, friend requests and replies to your inquiries), and updated the purposes, retention, processors, cross-border transfers,
     deletion scope and security measures accordingly. See Section 16 for the change history.
   </div>
@@ -53,7 +53,7 @@
         <td>Location</td>
         <td>Current location (latitude/longitude) — processed on the device and by Google Maps/Places SDKs for map and nearby-place features;
             it is not stored on the Operator's servers or linked to your TourJ account identifier.
-            Names, addresses and coordinates of destinations you deliberately save are trip content, not a current-location history.</td>
+            Names, addresses and coordinates of destinations you deliberately save are trip content, not a current-location history. However, the capture location of album photos is stored and linked to your account as described under "Trip albums".</td>
         <td>When using map/place features (only if you grant the OS permission)</td>
       </tr>
       <tr>
@@ -66,6 +66,14 @@
         <td>Ticket & document files</td>
         <td>Booking confirmations, receipts and ticket images/PDFs — <strong>stored only on your device and never uploaded to our servers</strong></td>
         <td>When you attach or scan them</td>
+      </tr>
+      <tr>
+        <td>Trip albums</td>
+        <td>A display copy of each photo you upload (long side up to 2,048 px) and a thumbnail — <strong>the original file and its embedded metadata (EXIF/GPS) are never uploaded</strong>;
+            capture time and time zone; capture location (latitude/longitude — stored as is if you choose "precise" for that photo, blurred to roughly 1 km if you choose
+            "approximate", and not stored if you choose "hidden"); the itinerary place the photo is linked to (name and coordinates); the uploader (account identifier and
+            nickname); who hearted the photo (account identifiers); a photo hash to prevent duplicate uploads; photo size and upload time</td>
+        <td>When you upload photos to an album (only the photos you pick; the capture time and location are read from the photo's metadata on your device and sent separately)</td>
       </tr>
       <tr>
         <td>AI usage data</td>
@@ -112,6 +120,7 @@
 
   <h2>2. Purposes of Processing</h2>
   <ul>
+    <li>Trip albums — sharing photos among shared-trip members and placing photos on itinerary days and places by capture time and location</li>
     <li>Member identification and authentication; isolating and syncing your data across devices</li>
     <li>Providing core features: trips, places, tickets, budgets</li>
     <li>Friends, trip sharing and read-only share links</li>
@@ -127,6 +136,8 @@
 
   <h2>3. Retention Periods</h2>
   <ul>
+    <li><strong>Trip albums</strong>: kept until you delete the photo, delete the trip (album), or delete your account, and then erased together with the photo files.
+        In a shared trip, when the album owner (the trip owner) deletes the trip or their account, photos uploaded by members are deleted as well.</li>
     <li><strong>Account data and user content</strong>: kept until account deletion, then erased without delay (see Section 7 for scope and exceptions).</li>
     <li><strong>AI usage counters</strong>: recorded per day; all deleted upon account deletion.</li>
     <li><strong>Inquiry &amp; feedback chat</strong>: kept until you delete your account, then deleted without delay. However, conversations about disputes or
@@ -155,6 +166,7 @@
   <h2>4. Provision to Third Parties</h2>
   <p>We do not sell personal data and, in principle, do not provide it to third parties without consent, except:</p>
   <ul>
+    <li>Trip albums: photos and capture information (including location according to your setting) and your nickname in a shared trip's album are visible to that trip's members.</li>
     <li>When you consent or request it yourself — e.g., sharing a trip shows your nickname/avatar and trip content to that friend;
         creating a read-only share link shows a sanitized trip summary (booking references, individual expenses and attachments removed) to anyone with the link.</li>
     <li>Where required by law or by lawful requests of investigative authorities.</li>
@@ -167,9 +179,9 @@
     </thead>
     <tbody>
       <tr>
-        <td>Google LLC<br>(Firebase Authentication, Cloud Firestore, Cloud Functions, Crashlytics, Analytics, App Check)</td>
-        <td>Authentication, data storage/sync, AI proxy server, crash/usage analytics, app integrity</td>
-        <td>Account, profile, user content, inquiry &amp; feedback chat, crash/performance logs, usage events</td>
+        <td>Google LLC<br>(Firebase Authentication, Cloud Firestore, Cloud Functions, Cloud Storage for Firebase, Crashlytics, Analytics, App Check)</td>
+        <td>Authentication, data storage/sync, album photo storage, AI proxy server, crash/usage analytics, app integrity</td>
+        <td>Account, profile, user content, album photo copies and capture information, inquiry &amp; feedback chat, crash/performance logs, usage events</td>
       </tr>
       <tr>
         <td>Google LLC<br>(Gemini API)</td>
@@ -222,8 +234,8 @@
       <tr><td>Countries</td>
           <td>The United States and other countries where Google/Apple operate data centers. Firestore and the AI proxy
               (Cloud Functions) run primarily in the Seoul region (asia-northeast3); authentication, analytics and AI
-              processing may occur in the U.S. or elsewhere.</td></tr>
-      <tr><td>Items</td><td>The items listed in Sections 1 and 5, including the inquiry &amp; feedback chat, notification addresses and notification content, and in-app purchase transaction information</td></tr>
+              processing, including photo storage (Cloud Storage), may occur in the U.S. or elsewhere.</td></tr>
+      <tr><td>Items</td><td>The items listed in Sections 1 and 5, including album photo copies and capture information, the inquiry &amp; feedback chat, notification addresses and notification content, and in-app purchase transaction information</td></tr>
       <tr><td>Timing / method</td><td>Transferred over encrypted connections (TLS/HTTPS) whenever you use the Service, including sending chat messages and push notifications</td></tr>
       <tr><td>Purpose</td><td>The purposes in Section 2</td></tr>
       <tr><td>Retention</td>
@@ -244,7 +256,7 @@
     <li><strong>Server (Firebase)</strong>: account and profile; all trips, places and folders; globe backup (wishlist, engrave records);
         friend relationships (including your entry left in friends' lists); share links you created; invitations sent or received;
         <strong>shared trips you own (deleted for all members)</strong>; your membership in other members' shared trips;
-        the 1:1 inquiry and feedback chat (all messages and the conversation summary) and this account's device notification addresses;
+        the 1:1 inquiry and feedback chat (all messages and the conversation summary) and this account's device notification addresses; trip albums you own (including photos uploaded by members) and photos you uploaded to other members' albums;
         AI usage records; the Firebase auth account (with Apple sign-in token revocation).</li>
     <li><strong>Your device</strong>: trip files, ticket/booking/receipt files, wishlist, app settings and AI consent records,
         scheduled notifications; analytics identifiers and accumulated data are reset.</li>
@@ -294,6 +306,7 @@
 
   <h2>11. Security Measures</h2>
   <ul>
+    <li>Trip albums receive only display copies with metadata (EXIF/GPS) removed, never originals, and capture locations are stored only according to the visibility you choose.</li>
     <li>All network traffic is encrypted with TLS (HTTPS).</li>
     <li>Firestore security rules restrict access to your own data (or trips you are a member of).</li>
     <li>Security rules let only you and the Operator read your 1:1 inquiry and feedback chat, and sent messages cannot be edited or deleted in the app so the
@@ -349,7 +362,7 @@
     <li>September 28, 2026 (effective October 5, 2026): added the 1:1 inquiry and feedback chat (messages and device information at the time of sending) and
         notification addresses (Firebase Cloud Messaging registration tokens) for push notifications (trip invitations, a friend joining your trip, friend requests
         and replies to inquiries), with their purposes, retention, processors (Firebase Cloud Messaging, Apple Push Notification service), cross-border transfers,
-        deletion scope and security measures.</li>
+        deletion scope and security measures. Also clarified trip album photo copies, capture time/location, sharing, retention, file storage, deletion and security.</li>
   </ul>
 
   <footer class="page-footer">
