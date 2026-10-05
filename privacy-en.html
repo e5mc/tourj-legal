@@ -13,7 +13,7 @@
     <h1>Privacy Policy</h1>
     <div class="meta">
       Service: TourJ<br>
-      Effective: October 5, 2026 · Last updated: September 28, 2026 (first effective May 23, 2026)
+      Effective: October 15, 2026 · Last updated: October 5, 2026 (first effective May 23, 2026)
     </div>
     <div class="lang-switch">
       <a href="privacy-ko.html">한국어</a> · <strong>English</strong> · <a href="index.html">← Index</a>
@@ -21,10 +21,10 @@
   </header>
 
   <div class="callout">
-    <strong>Revision notice — September 28, 2026 (effective October 5, 2026)</strong><br>
-    We added the data processed for trip albums (photo copies, capture time and capture location), the in-app 1:1 inquiry and feedback chat ("뚜르제이에게 말하기" in the Me tab) and for push notifications (trip invitations,
-    a friend joining your trip, friend requests and replies to your inquiries), and updated the purposes, retention, processors, cross-border transfers,
-    deletion scope and security measures accordingly. See Section 16 for the change history.
+    <strong>Revision notice — October 5, 2026 (effective October 15, 2026)</strong><br>
+    We added the information we receive through Kakao and Naver sign-in (member number or user identifier, nickname, profile photo URL), the related processors and
+    the disconnection of those sign-ins when you delete your account, and stated that new email sign-ups are no longer accepted and that no personal data is provided
+    to MyRealTrip when you follow a booking link. See Section 16 for the change history.
   </div>
 
   <p>
@@ -41,8 +41,17 @@
     <tbody>
       <tr>
         <td>Account</td>
-        <td>Email address, display name, Firebase UID, sign-in provider identifier, profile photo URL (if provided by the social login)</td>
-        <td>Email sign-up, Sign in with Apple, Google Sign-In</td>
+        <td>Email address (Sign in with Apple, Google Sign-In and existing email accounts only), display name, Firebase UID, sign-in provider identifier, profile photo URL (if provided by the social login)</td>
+        <td>Sign in with Apple, Google, Kakao or Naver; signing in to an existing email account (new email sign-ups are no longer accepted)</td>
+      </tr>
+      <tr>
+        <td>Kakao / Naver sign-in</td>
+        <td>Kakao: member number, plus nickname and profile photo URL if you agree to provide them on Kakao's consent screen<br>
+            Naver: user identifier, plus nickname and profile photo URL if you agree to provide them on Naver's consent screen<br>
+            The member number or identifier is used as your account identifier (Firebase UID, e.g. "kakao:&lt;number&gt;"); the nickname and photo URL are stored as your display name and profile photo.
+            We do not receive email addresses, phone numbers, gender, birthdays or any other information. The access token received at sign-in is used on our server only to verify you and is not stored there
+            (the Kakao/Naver sign-in module keeps it on your device).</td>
+        <td>When you sign in with Kakao or Naver (received from Kakao or Naver)</td>
       </tr>
       <tr>
         <td>Profile</td>
@@ -171,6 +180,13 @@
         creating a read-only share link shows a sanitized trip summary (booking references, individual expenses and attachments removed) to anyone with the link.</li>
     <li>Where required by law or by lawful requests of investigative authorities.</li>
   </ul>
+  <p>
+    <strong>MyRealTrip booking links</strong>: when you move from the app's shopping, accommodation or flight screens to MyRealTrip (MyRealTrip Inc.) and book a product,
+    you provide the booking and payment details directly to MyRealTrip, and MyRealTrip's privacy policy applies. We do not receive those booking or payment details and
+    do not provide your personal data to MyRealTrip. To show flight fares and accommodation prices in the app, our server sends MyRealTrip only search conditions such as
+    departure/arrival airports, dates, number of travelers and accommodation area/property numbers; booking links carry only our partner number and the app screen name
+    (nothing that identifies you).
+  </p>
 
   <h2>5. Processing Delegation (Processors)</h2>
   <table>
@@ -217,6 +233,16 @@
         <td>Google Play order ID, product ID, quantity, purchase/refund times, transaction environment and refund status. Google handles payment details directly; TourJ does not receive them.</td>
       </tr>
       <tr>
+        <td>Kakao Corp.</td>
+        <td>Kakao Login (verifying your identity); disconnecting Kakao Login when you delete your account</td>
+        <td>Kakao member number, nickname and profile photo URL (if you agree), sign-in access token (used only for verification)</td>
+      </tr>
+      <tr>
+        <td>NAVER Corp.</td>
+        <td>Naver Login (verifying your identity); disconnecting Naver Login when you delete your account</td>
+        <td>Naver user identifier, nickname and profile photo URL (if you agree), sign-in access token (used only for verification)</td>
+      </tr>
+      <tr>
         <td>Open-Meteo (non-profit open API)</td>
         <td>Weather forecasts for destinations</td>
         <td>Destination city coordinates and dates (no account identifiers)</td>
@@ -257,7 +283,9 @@
         friend relationships (including your entry left in friends' lists); share links you created; invitations sent or received;
         <strong>shared trips you own (deleted for all members)</strong>; your membership in other members' shared trips;
         the 1:1 inquiry and feedback chat (all messages and the conversation summary) and this account's device notification addresses; trip albums you own (including photos uploaded by members) and photos you uploaded to other members' albums;
-        AI usage records; the Firebase auth account (with Apple sign-in token revocation).</li>
+        AI usage records; the Firebase auth account (with Apple sign-in token revocation).
+        For accounts that use Kakao or Naver sign-in, the app also asks Kakao or Naver to disconnect the sign-in when you delete the account in the app
+        (if that request fails, or if you asked us to delete your account by email, you can disconnect TourJ yourself in the connected-services settings of your Kakao or Naver account).</li>
     <li><strong>Your device</strong>: trip files, ticket/booking/receipt files, wishlist, app settings and AI consent records,
         scheduled notifications; analytics identifiers and accumulated data are reset.</li>
   </ul>
@@ -277,7 +305,7 @@
     <li><strong>Dispute/complaint records</strong>: records in the 1:1 inquiry and feedback chat about disputes or complaints, such as purchases and refunds, may be kept separately for 3 years after resolution under Section 3.</li>
     <li><strong>Data under statutory retention</strong>: stored separately for the legally required period, then destroyed.</li>
   </ul>
-  <p>You may re-register with the same email at any time; deleted data cannot be recovered.</p>
+  <p>You may sign up again at any time with Sign in with Apple, Google, Kakao or Naver (new email sign-ups are not accepted); deleted data cannot be recovered.</p>
 
   <h2>8. AI Features (Google Gemini)</h2>
   <ul>
@@ -363,6 +391,9 @@
         notification addresses (Firebase Cloud Messaging registration tokens) for push notifications (trip invitations, a friend joining your trip, friend requests
         and replies to inquiries), with their purposes, retention, processors (Firebase Cloud Messaging, Apple Push Notification service), cross-border transfers,
         deletion scope and security measures. Also clarified trip album photo copies, capture time/location, sharing, retention, file storage, deletion and security.</li>
+    <li>October 5, 2026 (effective October 15, 2026): added the information received through Kakao and Naver sign-in (member number or user identifier, nickname,
+        profile photo URL), how it is collected, the processors (Kakao Corp., NAVER Corp.) and disconnection on account deletion; stated that new email sign-ups are
+        no longer accepted and that no personal data is provided to MyRealTrip through booking links.</li>
   </ul>
 
   <footer class="page-footer">
