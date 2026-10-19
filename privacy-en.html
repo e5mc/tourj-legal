@@ -143,7 +143,7 @@
         <td>The sale copy (itinerary; places' names, addresses, coordinates, visit times and transport info; accommodations' names, addresses and check-in/check-out dates and
             times, without booking numbers or prices; flights' airports, dates/times and flight numbers; and, if the creator turns them on, notes, expense details and actual
             spending per person), the title, trip introduction and "Why here?" notes, promotional photos (up to 20 — photos the creator uploaded to the album or picked directly from their phone; for photos picked from the phone, only a display copy (long side up to 2,048px) and a preview image are uploaded, never the original file or its metadata (EXIF/GPS), and the capture time is used only on the device to work out which trip day (DAY) the photo belongs to),
-            a reel (optional — one vertical video of up to 30 seconds and its first-frame image, its length, size and whether it has sound, and its capture date (to check the trip period);
+            a promotional video (optional — one vertical video of up to 30 seconds and its first-frame image, its length, size and whether it has sound, and its capture date (to check the trip period);
             location and other metadata are removed by the app before upload), the list of products bought for the trip (optional),
             nickname, the eligibility and photo-verification record (photo verification result per place), acceptance of the Creator Terms (version and time), the content-filter result and
             words flagged for the moderator (to judge 19+), account identifiers of fellow members for a shared trip, and the moderator's review, rejection, pause and
@@ -187,7 +187,7 @@
       </tr>
       <tr>
         <td>Reports</td>
-        <td>The reporter's account identifier, the reported route, reel, route question, 1:1 talk or creator (with its title or nickname), the reason, details, and the outcome and time
+        <td>The reporter's account identifier, the reported route, promotional video, route question, 1:1 talk or creator (with its title or nickname), the reason, details, and the outcome and time
             (<strong>reporters are not identified to the person reported</strong>); for reports sent from the web page or by email, the sender's email address and message.
             When a 1:1 talk is reported, the latest messages of that conversation (up to 30) and the two people's account identifiers and names are kept with the report for review</td>
         <td>When you report in the app or send an email</td>
@@ -245,9 +245,10 @@
       <tr>
         <td>Payout information (original — encrypted)</td>
         <td>Legal name, resident registration number (alien registration number for foreign nationals), bank and account number (in the creator's own name — the account
-            holder is the same as the legal name), residency status and country of residence, overseas address (non-residents only), answers to the income-type questions
-            (business registration, selling plans), and documents submitted to apply a tax-treaty rate (if any)</td>
-        <td>Entered by the creator in "받을 인세 → 정산정보" (Royalties → Payout information) in the app (tax-treaty documents are submitted by email)</td>
+            holder is the same as the legal name), confirmation of Korean tax residency, and answers to the income-type questions
+            (business registration, selling plans), and a bank-issued account document image showing the bank, account holder and account number.
+            Unnecessary details such as balances and transaction history must be hidden before submission. ID card copies are not collected on this screen. New payout registrations and payments for overseas residents are currently unavailable.</td>
+        <td>Entered and attached by the creator in "받을 인세 → 정산정보" (Royalties → Payout information). The device removes image capture/location metadata and encrypts the image together with the payout information before transmission.</td>
       </tr>
       <tr>
         <td>On-screen summary</td>
@@ -260,11 +261,18 @@
             results, and the withholding list (legal name, resident registration number, amount paid, tax, etc.)</td>
         <td>At each monthly settlement and royalty payment</td>
       </tr>
+      <tr>
+        <td>Identity, account review and payout audit records</td>
+        <td>Payout profile version, review status and time, operator identifier, verification methods and evidence hashes, change-notice results,
+            applicant confirmation method (such as a video call or an in-person meeting) and outcome notes, payout and bank transaction identifiers, processing results and evidence hashes.
+            Uploading a bank document does not complete identity verification. Verification sessions are not recorded and separate ID card copies are not collected. Verification materials are processed only as needed for review.</td>
+        <td>When reviewing or changing payout information and confirming bank results</td>
+      </tr>
     </tbody>
   </table>
   <p>
     <strong>Legal basis:</strong> the resident registration number is processed under Article 24-2(1)(1), and the alien registration number under Article 24(1)(2), of the Personal Information
-    Protection Act, because laws such as Article 164 of the Income Tax Act (submission of payment statements) require them. Other payout information is processed to perform the contract with the creator
+    Protection Act, where necessary for withholding under Article 68(3) of the Enforcement Decree of the Framework Act on National Taxes and applicable laws such as Article 164 of the Income Tax Act (submission of payment statements). Other payout information is processed to perform the contract with the creator
     (the Creator Terms) and to comply with legal obligations such as tax withholding (Article 15(1)(4) and (2) of the Personal Information Protection Act).
   </p>
 
@@ -323,9 +331,9 @@
         Route questions (with answers) are kept until the asker deletes them or until the asker or the route's creator deletes their account.</li>
     <li><strong>Route purchase records</strong>: kept for 5 years as records on contracts, withdrawals, payment and supply under the Act on the Consumer Protection in Electronic
         Commerce. They are also the basis for royalty calculations, so they are kept for this period even if you delete your account.</li>
-    <li><strong>Payout information and settlement records</strong>: kept for royalty payments and tax filings and destroyed 5 years after the last payment date (Framework Act on
-        National Taxes), or for a longer period if required by law. They are kept for this period even if the account is deleted; payout information that was never used for a
-        payment is destroyed without delay once no royalty remains to be paid.
+    <li><strong>Payout information and settlement records</strong>: kept as necessary for royalty payments and tax filings. Tax books and supporting records are generally retained for 5 years from the day after the statutory filing deadline for the relevant tax period under Article 85-3 of the Framework Act on National Taxes,
+        or for a longer period if required by law. They are kept for this period even if the account is deleted; payout information that was never used for a
+        payment is destroyed without delay once no royalty remains to be paid. Temporary verification originals and transfer working copies are separated from legally required records and deleted without delay once their purpose is fulfilled.
         Early creator benefit records (the 100% royalty period, reels mission reviews and exclusive route records) are the basis for royalty calculations and are kept for the same period as settlement records.</li>
     <li><strong>Data subject to statutory retention</strong>: kept separately for the legally required period.</li>
     <li><strong>Dispute/complaint records</strong>: kept 3 years after resolution.</li>
@@ -366,7 +374,7 @@
     <tbody>
       <tr>
         <td>Google LLC<br>(Firebase Authentication, Cloud Firestore, Cloud Functions, Cloud Storage for Firebase, Firebase Hosting, Crashlytics, Analytics, App Check)</td>
-        <td>Authentication, data storage/sync, AI proxy server, storage of album photos, route promotional photos and reels, and 1:1 talk photos, Route Market server and public route web pages,
+        <td>Authentication, data storage/sync, AI proxy server, storage of album photos, route promotional photos and videos, and 1:1 talk photos, Route Market server and public route web pages,
             crash/usage analytics, app integrity</td>
         <td>Account, profile, user content, inquiry &amp; feedback chat, album photos and capture information, Route Market data (sale copies, purchases, reports, blocks, etc.),
             encrypted payout information (Google cannot open it), crash/performance logs, usage events</td>
@@ -539,7 +547,7 @@
     <li><strong>Payout information, including resident registration numbers,</strong> is encrypted as required by the Personal Information Protection Act. It is locked on your
         device with the Operator's public key (RSA-4096) and AES-256 before it is sent, and is stored only in that locked form on the server and database, so no one — including
         the Operator — can open it on the server. The key that opens it exists only on the Operator's computer, is password-protected, and is used on that computer only when
-        paying royalties. Opened originals and transfer/tax files are kept only in a separate access-restricted folder, and logs and screens show masked values only.</li>
+        reviewing identity, tax information and account ownership or paying royalties. Opened originals and transfer/tax files are kept only in a separate access-restricted folder, and logs and screens show masked values only.</li>
     <li>Route Market sales, purchase, report and block records can be written only by server functions and read only by those who need them (the seller, the buyer, the moderator), enforced by security rules.</li>
     <li>If a personal data breach occurs, we notify affected users within 72 hours and report to the authorities where required by law.</li>
   </ul>
