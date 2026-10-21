@@ -13,7 +13,7 @@
     <h1>Privacy Policy</h1>
     <div class="meta">
       Service: TourJ<br>
-      Effective: October 19, 2026 · Last updated: October 12, 2026 (first effective May 23, 2026)
+      Effective: October 28, 2026 · Last updated: October 21, 2026 (first effective May 23, 2026)
     </div>
     <div class="lang-switch">
       <a href="privacy-ko.html">한국어</a> · <strong>English</strong> · <a href="index.html">← Index</a>
@@ -21,17 +21,15 @@
   </header>
 
   <div class="callout">
-    <strong>Revision notice — October 12, 2026 (effective October 19, 2026)</strong><br>
-    We added how we process data for Route Market (selling and buying routes, route questions, reports, blocks, 19+ age confirmation, public web pages and search visibility,
-    and 1:1 talk between buyers and creators), creators' payout information for royalty payments (including the resident registration number), and early creator benefits
-    (the 100% royalty period, the reels mission and exclusive routes), and updated the purposes, retention, disclosures, processors, cross-border transfers, deletion scope
-    and security measures accordingly.<br>
-    This revision takes effect on October 19, 2026. The revision announced on October 5, 2026 (data received through Kakao and Naver sign-in, the end of new email
-    sign-ups, and MyRealTrip booking links) takes effect on October 15, 2026 as announced. See Section 16 for the change history.
+    <strong>Revision notice — October 21, 2026 (effective October 28, 2026)</strong><br>
+    We added the information we receive through identity verification when a Route Market creator registers payout information or changes the bank account for royalties
+    (KG Inicis Integrated Authentication, connected through PortOne): name, date of birth, mobile phone number and the encrypted connecting information (CI), together with the processors
+    (Korea PortOne Co., Ltd. and KG Inicis Co., Ltd.). The CI and the mobile phone number are destroyed right after the identity match is checked and are not stored.<br>
+    We also corrected the Operator's designation to match its business registration (엄파이어 (umpire), business registration no. 634-26-02306 — the Operator has not changed). See Section 16 for the change history.
   </div>
 
   <p>
-    umpire (sole proprietor, operator: EOM MINKYU, the "Operator") values the personal data of users of the
+    umpire (엄파이어; a sole proprietorship owned by EOM MINKYU; business registration no. 634-26-02306; the "Operator") values the personal data of users of the
     mobile application <strong>TourJ</strong> (the "Service") and publishes this Privacy Policy in accordance
     with applicable laws, including the Personal Information Protection Act of Korea.
   </p>
@@ -251,6 +249,15 @@
         <td>Entered and attached by the creator in "받을 인세 → 정산정보" (Royalties → Payout information). The device removes image capture/location metadata and encrypts the image together with the payout information before transmission.</td>
       </tr>
       <tr>
+        <td>Identity verification results</td>
+        <td>Name, date of birth, mobile phone number, the encrypted connecting information (CI), and the time, method and transaction ID of the verification. Gender and Korean/foreign status are not received.
+            The name and date of birth are used to check that they match the legal name and the first digits of the resident (alien) registration number in the payout information and that the creator is 19 or older,
+            and, when the bank account is changed, that the person verifying again is the same person who registered.
+            <strong>The CI and the mobile phone number are destroyed right after the identity match is checked and are not stored.</strong></td>
+        <td>Received through the identity verification the creator completes when registering payout information or changing the bank account (KG Inicis Integrated Authentication — the method the user chooses, such as Naver, Kakao, Toss, PASS or a financial certificate).
+            The server retrieves the result directly from the verification provider instead of trusting values sent by the app.</td>
+      </tr>
+      <tr>
         <td>On-screen summary</td>
         <td>Masked name (e.g., H*D), bank, last 4 digits of the account number, birth year, number type (resident/alien), residency and country, income type, registration and update times</td>
         <td>Created by the app when payout information is registered</td>
@@ -293,7 +300,7 @@
     <li>Keeping Route Market safe — content filtering, handling reports, blocking, restricting 19+ routes, handling shared-trip member objections,
         moderation actions such as pausing sales or suspending creators, and dispute handling</li>
     <li>Comparing a creator's route purchase records with the content of the purchased routes when a trip is listed for sale, to check whether it simply resells a purchased route</li>
-    <li>Calculating and paying creator royalties (including applying early creators' 100% royalty period, reels mission and exclusive bonus), verifying identity, bank account and age, and meeting tax obligations such as withholding and filing payment statements</li>
+    <li>Calculating and paying creator royalties (including applying early creators' 100% royalty period, reels mission and exclusive bonus), verifying identity, bank account and age (including through an identity verification service), and meeting tax obligations such as withholding and filing payment statements</li>
     <li>Service stability, crash diagnosis and improvement; pseudonymized usage statistics</li>
     <li>Compliance with legal obligations and dispute handling</li>
   </ul>
@@ -334,7 +341,8 @@
     <li><strong>Payout information and settlement records</strong>: kept as necessary for royalty payments and tax filings. Tax books and supporting records are generally retained for 5 years from the day after the statutory filing deadline for the relevant tax period under Article 85-3 of the Framework Act on National Taxes,
         or for a longer period if required by law. They are kept for this period even if the account is deleted; payout information that was never used for a
         payment is destroyed without delay once no royalty remains to be paid. Temporary verification originals and transfer working copies are separated from legally required records and deleted without delay once their purpose is fulfilled.
-        Early creator benefit records (the 100% royalty period, reels mission reviews and exclusive route records) are the basis for royalty calculations and are kept for the same period as settlement records.</li>
+        Early creator benefit records (the 100% royalty period, reels mission reviews and exclusive route records) are the basis for royalty calculations and are kept for the same period as settlement records.
+        Identity verification results (name, date of birth and verification records) are kept for the same period as payout information; the CI and mobile phone number received through identity verification are destroyed as soon as the check is complete.</li>
     <li><strong>Data subject to statutory retention</strong>: kept separately for the legally required period.</li>
     <li><strong>Dispute/complaint records</strong>: kept 3 years after resolution.</li>
   </ul>
@@ -423,12 +431,23 @@
         <td>Naver user identifier, nickname and profile photo URL (if you agree), sign-in access token (used only for verification)</td>
       </tr>
       <tr>
+        <td>Korea PortOne Co., Ltd.</td>
+        <td>Identity verification integration (relaying verification requests and retrieving results)</td>
+        <td>Identity verification results (name, date of birth, mobile phone number, CI), verification transaction ID</td>
+      </tr>
+      <tr>
+        <td>KG Inicis Co., Ltd.</td>
+        <td>Integrated Authentication (identity verification) — relaying verification with the authentication provider the user chooses</td>
+        <td>Information entered on the verification screen (name, date of birth, mobile phone number, etc.) and the verification result (including the CI)</td>
+      </tr>
+      <tr>
         <td>Open-Meteo (non-profit open API)</td>
         <td>Weather forecasts for destinations</td>
         <td>Destination city coordinates and dates (no account identifiers)</td>
       </tr>
     </tbody>
   </table>
+  <p>The providers of the authentication method the user chooses during identity verification (Naver, Kakao, Toss, PASS, financial certificates, bank certificates, Samsung Pass, etc.) process information under their own privacy policies when the user agrees to their terms and completes the verification.</p>
   <p>If we engage a tax accountant to file withholding returns and payment statements, we will add them to this table and let you know.</p>
 
   <h2>6. Cross-Border Transfers</h2>
@@ -441,8 +460,8 @@
       <tr><td>Countries</td>
           <td>The United States and other countries where Google/Apple operate data centers. Firestore and Cloud Functions (the AI proxy and the Route Market server)
               run primarily in the Seoul region (asia-northeast3); authentication, analytics, AI processing, photo and video file storage (Cloud Storage) and web delivery
-              (Firebase Hosting) may occur in the U.S. or elsewhere. Kakao and Naver login are handled by Korean companies.</td></tr>
-      <tr><td>Items</td><td>The items listed in Sections 1 and 5, including the inquiry &amp; feedback chat, notification addresses and notification content, album photos and capture information, Route Market data and in-app purchase transaction information.
+              (Firebase Hosting) may occur in the U.S. or elsewhere. Kakao and Naver login and identity verification (Korea PortOne Co., Ltd. and KG Inicis Co., Ltd.) are handled by Korean companies.</td></tr>
+      <tr><td>Items</td><td>The items listed in Sections 1 and 5, including the inquiry &amp; feedback chat, notification addresses and notification content, album photos and capture information, Route Market data, in-app purchase transaction information and identity verification results (name, date of birth and verification records).
               Payout information is transferred and stored only after it is encrypted on your device with the Operator's public key, so it cannot be opened on the servers
               (including by Google); it is opened only on the Operator's computer in Korea.</td></tr>
       <tr><td>Timing / method</td><td>Transferred over encrypted connections (TLS/HTTPS) whenever you use the Service, including sending chat messages and push notifications</td></tr>
@@ -490,7 +509,7 @@
         (Crashlytics is retained 90 days before removal begins; Analytics user/event-level retention is the property's 2- or 14-month setting,
         while standard aggregate reports are outside that setting; Gemini abuse-monitoring retention).</li>
     <li><strong>Sale copies and listing records of routes already sold</strong>: the sale copy, promotional photos and listing record (including the nickname) are kept so that buyers can keep using the route.</li>
-    <li><strong>Route purchase records, royalty ledger, statements, payout information and early creator benefit records</strong>: kept for the periods in Section 3 under the Act on the Consumer Protection in
+    <li><strong>Route purchase records, royalty ledger, statements, payout information, identity verification results and early creator benefit records</strong>: kept for the periods in Section 3 under the Act on the Consumer Protection in
         Electronic Commerce, the Framework Act on National Taxes, the Income Tax Act and other laws, then destroyed. Remaining royalties of a creator who left are paid under the Creator Terms.</li>
     <li><strong>Report records</strong>: kept as moderation records with the reporter's account identifier removed. Message copies of a reported 1:1 talk are kept with the report for the period in Section 3.</li>
     <li><strong>Promotional materials already published</strong>: under the Creator Terms, promotional materials we published or distributed before you left (social media posts, ads, etc.)
@@ -548,6 +567,8 @@
         device with the Operator's public key (RSA-4096) and AES-256 before it is sent, and is stored only in that locked form on the server and database, so no one — including
         the Operator — can open it on the server. The key that opens it exists only on the Operator's computer, is password-protected, and is used on that computer only when
         reviewing identity, tax information and account ownership or paying royalties. Opened originals and transfer/tax files are kept only in a separate access-restricted folder, and logs and screens show masked values only.</li>
+    <li><strong>Identity verification results</strong> are checked by the server directly with the verification provider instead of trusting values sent by the app; they can be written only by server functions and read only by those who need them (the creator and the Operator), enforced by security rules.
+        The CI and mobile phone number are destroyed right after the identity match is checked and are not stored.</li>
     <li>Route Market sales, purchase, report and block records can be written only by server functions and read only by those who need them (the seller, the buyer, the moderator), enforced by security rules.</li>
     <li>If a personal data breach occurs, we notify affected users within 72 hours and report to the authorities where required by law.</li>
   </ul>
@@ -578,7 +599,7 @@
   </p>
   <p>
     19+ routes in Route Market are restricted based on the age you state (whether you are 19 or older). Only users aged 19 or older may sell routes (as creators); when payout
-    information is registered, age is checked against the date of birth in the resident (alien) registration number (if a creator turns out to be under 19, Article 4 of the Creator Terms applies).
+    information is registered, age is checked against the date of birth received through identity verification and the date of birth in the resident (alien) registration number (if a creator turns out to be under 19, Article 4 of the Creator Terms applies).
   </p>
 
   <h2>14. Privacy Officer</h2>
@@ -612,6 +633,10 @@
         19+ confirmation, public web pages and search visibility, and 1:1 talk between buyers and creators), creator payout information (resident registration number,
         bank account, etc.) and early creator benefit records (100% royalty period, reels mission reviews, exclusive routes), with their purposes, legal basis,
         retention, disclosures, processors, cross-border transfers, deletion scope and security measures.</li>
+    <li>October 21, 2026 (effective October 28, 2026): added the information received through identity verification when a creator registers payout information or changes the bank account
+        (KG Inicis Integrated Authentication — name, date of birth, mobile phone number and the CI), with its purposes, retention, processors (Korea PortOne Co., Ltd., KG Inicis Co., Ltd.),
+        cross-border transfers, deletion scope and security measures, and stated that the CI and mobile phone number are not stored.
+        Corrected the Operator's designation to match its business registration (엄파이어 (umpire), business registration no. 634-26-02306).</li>
   </ul>
 
   <footer class="page-footer">
