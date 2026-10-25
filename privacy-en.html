@@ -23,6 +23,15 @@
   </header>
 
   <div class="callout">
+    <strong>Naver sign-in discontinued — October 25, 2026</strong><br>
+    New registrations and sign-in through Naver have ended. Sign in with Apple, Google and Kakao, and sign-in to existing email accounts remain available.
+    Existing Naver accounts and stored data are not automatically deleted or transferred to another sign-in account. Contact us below if you need help accessing or deleting an existing account.
+    You can disconnect TourJ in your Naver account's connected-services settings.
+    <p>Naver identifiers, nicknames and profile photo URLs received before discontinuation remain subject to the existing retention rules for maintaining or deleting those accounts and their data. No new Naver sign-in information is collected.</p>
+  </div>
+
+
+  <div class="callout">
     <strong>Revision notice — October 21, 2026 (effective October 28, 2026)</strong><br>
     We added the information we receive through identity verification when a Route Market creator registers payout information or changes the bank account for royalties
     (KG Inicis Integrated Authentication, connected through PortOne): name, date of birth, mobile phone number and the encrypted connecting information (CI), together with the processors
@@ -45,16 +54,15 @@
       <tr>
         <td>Account</td>
         <td>Email address (Sign in with Apple, Google Sign-In and existing email accounts only), display name, Firebase UID, sign-in provider identifier, profile photo URL (if provided by the social login)</td>
-        <td>Sign in with Apple, Google, Kakao or Naver; signing in to an existing email account (new email sign-ups are no longer accepted)</td>
+        <td>Sign in with Apple, Google, Kakao; signing in to an existing email account (new email sign-ups are no longer accepted)</td>
       </tr>
       <tr>
-        <td>Kakao / Naver sign-in</td>
+        <td>Kakao sign-in</td>
         <td>Kakao: member number, plus nickname and profile photo URL if you agree to provide them on Kakao's consent screen<br>
-            Naver: user identifier, plus nickname and profile photo URL if you agree to provide them on Naver's consent screen<br>
             The member number or identifier is used as your account identifier (Firebase UID, e.g. "kakao:&lt;number&gt;"); the nickname and photo URL are stored as your display name and profile photo.
             We do not receive email addresses, phone numbers, gender, birthdays or any other information. The access token received at sign-in is used on our server only to verify you and is not stored there
-            (the Kakao/Naver sign-in module keeps it on your device).</td>
-        <td>When you sign in with Kakao or Naver (received from Kakao or Naver)</td>
+            (the Kakao sign-in module keeps it on your device).</td>
+        <td>When you sign in with Kakao (received from Kakao)</td>
       </tr>
       <tr>
         <td>Profile</td>
@@ -428,11 +436,6 @@
         <td>Kakao member number, nickname and profile photo URL (if you agree), sign-in access token (used only for verification)</td>
       </tr>
       <tr>
-        <td>NAVER Corp.</td>
-        <td>Naver Login (verifying your identity); disconnecting Naver Login when you delete your account</td>
-        <td>Naver user identifier, nickname and profile photo URL (if you agree), sign-in access token (used only for verification)</td>
-      </tr>
-      <tr>
         <td>Korea PortOne Co., Ltd.</td>
         <td>Identity verification integration (relaying verification requests and retrieving results)</td>
         <td>Identity verification results (name, date of birth, mobile phone number, CI), verification transaction ID</td>
@@ -462,7 +465,7 @@
       <tr><td>Countries</td>
           <td>The United States and other countries where Google/Apple operate data centers. Firestore and Cloud Functions (the AI proxy and the Route Market server)
               run primarily in the Seoul region (asia-northeast3); authentication, analytics, AI processing, photo and video file storage (Cloud Storage) and web delivery
-              (Firebase Hosting) may occur in the U.S. or elsewhere. Kakao and Naver login and identity verification (Korea PortOne Co., Ltd. and KG Inicis Co., Ltd.) are handled by Korean companies.</td></tr>
+              (Firebase Hosting) may occur in the U.S. or elsewhere. Kakao login and identity verification (Korea PortOne Co., Ltd. and KG Inicis Co., Ltd.) are handled by Korean companies.</td></tr>
       <tr><td>Items</td><td>The items listed in Sections 1 and 5, including the inquiry &amp; feedback chat, notification addresses and notification content, album photos and capture information, Route Market data, in-app purchase transaction information and identity verification results (name, date of birth and verification records).
               Payout information is transferred and stored only after it is encrypted on your device with the Operator's public key, so it cannot be opened on the servers
               (including by Google); it is opened only on the Operator's computer in Korea.</td></tr>
@@ -491,8 +494,8 @@
         and questions you asked and questions on your routes; Route Market 1:1 talks you had as a buyer or creator (the whole conversation including the other person's messages
         and photos — it also disappears from the other person's list), daily talk counts and your routes' talk settings;
         AI usage records; the Firebase auth account (with Apple sign-in token revocation).
-        For accounts that use Kakao or Naver sign-in, the app also asks Kakao or Naver to disconnect the sign-in when you delete the account in the app
-        (if that request fails, or if you asked us to delete your account by email, you can disconnect TourJ yourself in the connected-services settings of your Kakao or Naver account).</li>
+        For accounts that use Kakao sign-in, the app also asks Kakao to disconnect the sign-in when you delete the account in the app
+        (if that request fails, or if you asked us to delete your account by email, you can disconnect TourJ yourself in the connected-services settings of your Kakao account).</li>
     <li><strong>Routes you were selling</strong>: their sale is paused so they are no longer sold, and routes under review are withdrawn.</li>
     <li><strong>Your device</strong>: trip files, ticket/booking/receipt files, wishlist, app settings and AI consent records,
         scheduled notifications; analytics identifiers and accumulated data are reset.</li>
@@ -519,7 +522,7 @@
     <li><strong>Dispute/complaint records</strong>: records in the 1:1 inquiry and feedback chat about disputes or complaints, such as purchases and refunds, may be kept separately for 3 years after resolution under Section 3.</li>
     <li><strong>Data under statutory retention</strong>: stored separately for the legally required period, then destroyed.</li>
   </ul>
-  <p>You may sign up again at any time with Sign in with Apple, Google, Kakao or Naver (new email sign-ups are not accepted); deleted data cannot be recovered.</p>
+  <p>You may sign up again at any time with Sign in with Apple, Google, Kakao (new email sign-ups are not accepted); deleted data cannot be recovered.</p>
 
   <h2>8. AI Features (Google Gemini)</h2>
   <ul>
