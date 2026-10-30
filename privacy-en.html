@@ -15,12 +15,20 @@
     <h1>Privacy Policy</h1>
     <div class="meta">
       Service: TourJ<br>
-      Effective: November 2, 2026 · Last updated: October 26, 2026 (first effective May 23, 2026)
+      Effective: November 6, 2026 (the October 26 revision from November 2) · Last updated: October 30, 2026 (first effective May 23, 2026)
     </div>
     <div class="lang-switch">
       <a href="privacy-ko.html">한국어</a> · <strong>English</strong> · <a href="index.html">← Index</a>
     </div>
   </header>
+
+  <div class="callout">
+    <strong>Revision notice — October 30, 2026 (effective November 6, 2026)</strong><br>
+    We added the <strong>seller contact details</strong> that Route Market creators provide for royalty settlement and operational contact (legal name, Korean mobile phone number and a confirmed email address)
+    and the confirmation code emails used to confirm that address (sent through Google's Gmail) to the personal data we process, together with how they are collected, their purposes, legal basis, retention,
+    processors, cross-border transfers, deletion scope and security measures. Seller contact details are visible only to the creator and the Operator. The mobile phone number received through identity
+    verification is used only to check whether it matches the seller contact number and is not stored. See Section 16 for the change history.
+  </div>
 
   <div class="callout">
     <strong>Revision notice — October 26, 2026 (effective November 2, 2026)</strong><br>
@@ -173,6 +181,21 @@
         <td>When a route is listed or edited, and when the moderator reviews or acts on it</td>
       </tr>
       <tr>
+        <td>Seller contact (creators)</td>
+        <td>Legal name, mobile phone number (Korean mobile numbers only), email address, when the email address was confirmed,
+            the comparison with identity verification (when the legal name was confirmed as the verified name; whether the mobile phone number matches the verified number — match, different,
+            or the creator chose to be contacted at a different number — and when it was checked), and the screen and time where the details were first and last entered
+            (<strong>visible only to the creator and the Operator — never to buyers or other users</strong>)</td>
+        <td>Entered by the creator on the listing (optional), "받을 인세" (Royalties) or payout information screens (required before registering payout information).
+            An email address is saved only after the creator enters the 6-digit confirmation code we send to it</td>
+      </tr>
+      <tr>
+        <td>Email confirmation code records</td>
+        <td>The receiving email address, the confirmation code (stored only as a value that cannot be turned back into the code), when it was sent, when it expires and when it was confirmed,
+            wrong attempts, the number of codes sent in 24 hours, and the number of codes sent to each address in 24 hours (the address is stored only as a value that cannot be turned back into it)</td>
+        <td>When a creator requests or enters a confirmation code for the seller contact</td>
+      </tr>
+      <tr>
         <td>Early creator benefits</td>
         <td>That a creator was designated a early creator and when they were notified, the date their 100% royalty period ends,
             reels mission records (the link and posting date of each reel to which we were invited as a collaborator, the review result and the reason a reel did not qualify,
@@ -253,6 +276,10 @@
     are not published, and 19+ routes are not published on the web. When a sale is paused the page is taken down, but it may remain in caches for up to about 10 minutes, and
     copies kept by search engines disappear according to each search engine's processing.
   </p>
+  <p>
+    <strong>Legal basis for seller contact:</strong> seller contact details and email confirmation code records are processed to perform the contract with the creator
+    (Article 4-2 of the <a href="creator-terms-ko.html">Creator Terms</a>) — operational contact and royalty settlement and payment notices (Article 15(1)(4) of the Personal Information Protection Act).
+  </p>
 
   <h3>1-2. Payout information (creator royalties)</h3>
   <p>
@@ -277,7 +304,10 @@
         <td>Name, date of birth, mobile phone number, the encrypted connecting information (CI), and the time, method and transaction ID of the verification. Gender and Korean/foreign status are not received.
             The name and date of birth are used to check that they match the legal name and the first digits of the resident (alien) registration number in the payout information and that the creator is 19 or older,
             and, when the bank account is changed, that the person verifying again is the same person who registered.
-            <strong>The CI and the mobile phone number are destroyed right after the identity match is checked and are not stored.</strong></td>
+            <strong>The CI and the mobile phone number are destroyed right after the identity match is checked and are not stored.</strong>
+            The mobile phone number is used only to check whether it matches the phone number in the creator's seller contact (1-1), and only the result (match or different) is kept in the seller contact.
+            If the creator changes that phone number, we look up the same verification result from the verification service again to compare it (the creator does not verify again).
+            The legal name in the seller contact is replaced with the name confirmed by identity verification.</td>
         <td>Received through the identity verification the creator completes when registering payout information or changing the bank account (KG Inicis Integrated Authentication — the method the user chooses, such as Naver, Kakao, Toss, PASS or a financial certificate).
             The server retrieves the result directly from the verification provider instead of trusting values sent by the app.</td>
       </tr>
@@ -325,6 +355,7 @@
         moderation actions such as pausing sales or suspending creators, and dispute handling</li>
     <li>Comparing a creator's route purchase records with the content of the purchased routes when a trip is listed for sale, to check whether it simply resells a purchased route</li>
     <li>Calculating and paying creator royalties (including applying early creators' 100% royalty period, reels mission and exclusive bonus), verifying identity, bank account and age (including through an identity verification service), and meeting tax obligations such as withholding and filing payment statements</li>
+    <li>Contacting Route Market creators (issues found during route review, royalty payment or tax filing problems, reports and disputes, and important notices such as changes to the terms) and checking seller contact details (sending and checking email confirmation codes, comparing them with identity verification results)</li>
     <li>Service stability, crash diagnosis and improvement; pseudonymized usage statistics</li>
     <li>Compliance with legal obligations and dispute handling</li>
   </ul>
@@ -368,6 +399,8 @@
         payment is destroyed without delay once no royalty remains to be paid. Temporary verification originals and transfer working copies are separated from legally required records and deleted without delay once their purpose is fulfilled.
         Early creator benefit records (the 100% royalty period, reels mission reviews and exclusive route records) are the basis for royalty calculations and are kept for the same period as settlement records.
         Identity verification results (name, date of birth and verification records) are kept for the same period as payout information; the CI and mobile phone number received through identity verification are destroyed as soon as the check is complete.</li>
+    <li><strong>Seller contact</strong> (including the comparison with identity verification): kept until you delete your account, then destroyed without delay.</li>
+    <li><strong>Email confirmation code records</strong>: destroyed as soon as the seller contact is saved; otherwise destroyed in the daily cleanup once 24 hours have passed since a code was last sent or entered.</li>
     <li><strong>Data subject to statutory retention</strong>: kept separately for the legally required period.</li>
     <li><strong>Dispute/complaint records</strong>: kept 3 years after resolution.</li>
   </ul>
@@ -411,7 +444,7 @@
         <td>Google LLC<br>(Firebase Authentication, Cloud Firestore, Cloud Functions, Cloud Storage for Firebase, Firebase Hosting, Crashlytics, Analytics, App Check)</td>
         <td>Authentication, data storage/sync, AI proxy server, storage of album photos, profile photos, photos in the 1:1 inquiry and feedback chat, route promotional photos and videos, and 1:1 talk photos, Route Market server and public route web pages,
             crash/usage analytics, app integrity</td>
-        <td>Account, profile (including profile photos), user content, inquiry &amp; feedback chat (including photos), album photos and capture information, Route Market data (sale copies, purchases, reports, blocks, etc.),
+        <td>Account, profile (including profile photos), user content, inquiry &amp; feedback chat (including photos), album photos and capture information, Route Market data (sale copies, purchases, reports, blocks, seller contact, etc.),
             encrypted payout information (Google cannot open it), crash/performance logs, usage events</td>
       </tr>
       <tr>
@@ -430,6 +463,11 @@
         <td>Notification address (registration token), notification content (the sender's nickname and trip name for trip invitation, trip joining and
             friend-request notifications; a message preview, name and route title for inquiry chat, route question and 1:1 talk notifications), and identifiers used to open the right screen when you
             tap a notification (trip, invitation or conversation identifiers)</td>
+      </tr>
+      <tr>
+        <td>Google LLC<br>(Gmail)</td>
+        <td>Sending email confirmation codes for Route Market seller contact</td>
+        <td>Receiving email address, confirmation code</td>
       </tr>
       <tr>
         <td>Apple Inc.<br>(Apple Push Notification service)</td>
@@ -483,10 +521,10 @@
           <td>The United States and other countries where Google/Apple operate data centers. Firestore and Cloud Functions (the AI proxy and the Route Market server)
               run primarily in the Seoul region (asia-northeast3); authentication, analytics, AI processing, photo and video file storage (Cloud Storage) and web delivery
               (Firebase Hosting) may occur in the U.S. or elsewhere. Kakao login and identity verification (Korea PortOne Co., Ltd. and KG Inicis Co., Ltd.) are handled by Korean companies.</td></tr>
-      <tr><td>Items</td><td>The items listed in Sections 1 and 5, including profile photos, the inquiry &amp; feedback chat (including photos), notification addresses and notification content, album photos and capture information, Route Market data, in-app purchase transaction information and identity verification results (name, date of birth and verification records).
+      <tr><td>Items</td><td>The items listed in Sections 1 and 5, including profile photos, the inquiry &amp; feedback chat (including photos), notification addresses and notification content, album photos and capture information, Route Market data (including seller contact: legal name, mobile phone number and email address), confirmation code emails (receiving address and code), in-app purchase transaction information and identity verification results (name, date of birth and verification records).
               Payout information is transferred and stored only after it is encrypted on your device with the Operator's public key, so it cannot be opened on the servers
               (including by Google); it is opened only on the Operator's computer in Korea.</td></tr>
-      <tr><td>Timing / method</td><td>Transferred over encrypted connections (TLS/HTTPS) whenever you use the Service, including sending chat messages and push notifications</td></tr>
+      <tr><td>Timing / method</td><td>Transferred over encrypted connections (TLS/HTTPS) whenever you use the Service, including sending chat messages, push notifications and confirmation code emails</td></tr>
       <tr><td>Purpose</td><td>The purposes in Section 2</td></tr>
       <tr><td>Retention</td>
           <td>Same as Section 3. Gemini API inputs may be temporarily retained by Google for abuse monitoring and then deleted
@@ -508,7 +546,7 @@
         <strong>shared trips you own (deleted for all members)</strong>; your membership in other members' shared trips;
         the 1:1 inquiry and feedback chat (all messages and photos and the conversation summary) and this account's device notification addresses; trip albums you own (including photos uploaded by members) and photos you uploaded to other members' albums;
         your Route Market creator public profile, follows (yours and those of others following you), saves, block list and 19+ confirmation, route edits awaiting review,
-        and questions you asked and questions on your routes; Route Market 1:1 talks you had as a buyer or creator (the whole conversation including the other person's messages
+        and questions you asked and questions on your routes; your seller contact (legal name, mobile phone number, email) and email confirmation code records; Route Market 1:1 talks you had as a buyer or creator (the whole conversation including the other person's messages
         and photos — it also disappears from the other person's list), daily talk counts and your routes' talk settings;
         AI usage records; the Firebase auth account (with Apple sign-in token revocation).
         For accounts that use Kakao sign-in, the app also asks Kakao to disconnect the sign-in when you delete the account in the app
@@ -568,6 +606,7 @@
      (by email or through the in-app 1:1 inquiry and feedback chat).
      We respond within 10 days. Rights may also be exercised through a legal representative or an authorized agent.
      In Route Market you can remove follows, saves and blocks yourself, pause routes you sell in "내 루트 팔기" (Sell my routes), and correct payout information by registering it again in the app.
+     You can correct your seller contact in "받을 인세 → 판매자 정보" (Royalties → Seller contact); once identity verification is done, the legal name is set to the verified name.
      If you answered the 19+ question by mistake, you can ask the officer to correct it. Purchase and settlement records that must be kept by law may not be deleted on request
      during the retention period; in that case we will tell you why.</p>
 
@@ -592,6 +631,9 @@
         reviewing identity, tax information and account ownership or paying royalties. Opened originals and transfer/tax files are kept only in a separate access-restricted folder, and logs and screens show masked values only.</li>
     <li><strong>Identity verification results</strong> are checked by the server directly with the verification provider instead of trusting values sent by the app; they can be written only by server functions and read only by those who need them (the creator and the Operator), enforced by security rules.
         The CI and mobile phone number are destroyed right after the identity match is checked and are not stored.</li>
+    <li><strong>Seller contact</strong> can be written only by server functions and read only by the creator and the Operator, enforced by security rules. Email confirmation codes are stored only as values that cannot be
+        turned back into the code, locked so the app cannot read them, and limited in validity (10 minutes), wrong attempts (5) and sending frequency. Confirmation emails contain only the code and instructions,
+        and we keep a record when the Operator views a seller's contact details.</li>
     <li>Route Market sales, purchase, report and block records can be written only by server functions and read only by those who need them (the seller, the buyer, the moderator), enforced by security rules.</li>
     <li>If a personal data breach occurs, we notify affected users within 72 hours and report to the authorities where required by law.</li>
   </ul>
@@ -664,6 +706,9 @@
         (with that day's place photos); applies from posting because Route Market had not opened to the public.</li>
     <li>October 26, 2026 (effective November 2, 2026): added profile photos you upload yourself (a 512 px copy with location and capture information removed) and photos exchanged in the
         1:1 inquiry and feedback chat, with how they are collected, their purposes, who can see them, retention, processors, cross-border transfers, deletion scope and security measures.</li>
+    <li>October 30, 2026 (effective November 6, 2026): added Route Market creators' seller contact (legal name, Korean mobile phone number and a confirmed email address) and email confirmation code records,
+        with how they are collected, their purposes, legal basis, retention, processor (Google LLC — Gmail), cross-border transfers, deletion scope and security measures, and stated that the mobile phone number
+        received through identity verification is used only for comparison with the seller contact number and is not stored.</li>
   </ul>
 
   <footer class="page-footer">
